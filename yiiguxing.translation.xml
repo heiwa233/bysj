@@ -1,0 +1,77 @@
+<application>
+  <component name="AppStorage">
+    <option name="newTranslationDialogX" value="574" />
+    <option name="newTranslationDialogY" value="359" />
+    <histories>
+      <item value="Public Key Retrieval is not allowed" />
+      <item value="Could not parse as expression: &quot;csslogin.css&quot; (template: &quot;backstagelogin&quot; - line 11, col 28)" />
+      <item value="后台" />
+      <item value="A query was run and no Result Maps were found for the Mapped Statement 'com.cheng.bysj.mapper.UserMapper.queryAllCar'. It's likely that neither a Result Type nor a Result Map was specified." />
+      <item value="The value of attribute &quot;parameterType&quot; associated with an element type &quot;select&quot; must not contain the '&lt;' character." />
+      <item value="Error resolving template [test], template might not exist or might not be accessible by any of the configured Template Resolvers" />
+      <item value="Expected one result (or null) to be returned by selectOne()" />
+      <item value="There is no getter for property named 'user' in 'class com.cheng.bysj.pojo.User'] with root cause" />
+      <item value="Invalid bound statement (not found): com.cheng.bysj.mapper.UserMapper.insertUser] with root cause" />
+      <item value="You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''zhangsan'' at line 1] with root cause" />
+      <item value="Repository" />
+      <item value="nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'user' in 'class com.cheng.bysj.pojo.User'] with root cause" />
+      <item value="Variable 'newUser' might not have been initialized" />
+      <item value="There is no getter for property named 'user' in 'class com.cheng.bysj.pojo.User'" />
+      <item value="Parameter Maps collection does not contain value for com.cheng.bysj.mapper.UserMapper.User] with root cause" />
+      <item value="Parameter Maps collection does not contain value for com.cheng.bysj.mapper.UserMapper.User" />
+      <item value="Result Maps collection does not contain value for com.cheng.bysj.pojo.User] with root cause" />
+      <item value="Ambiguous mapping. Cannot map 'userController' method com.cheng.bysj.controller.UserControllerloginAction()" />
+      <item value="add View Controller" />
+      <item value="login()' is already defined in 'cn.edu.svtcc.controller.LoginController'" />
+      <item value="Identify and stop the process that's listening on port 8080 or configure this application to listen on another port." />
+      <item value="Field error in object 'employe' on field 'department': rejected value [101]; codes [typeMismatch.employe.department,typeMismatch.department,typeMismatch.cn.edu.svtcc.bysj.pojo.Department,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employe.department,department]; arguments []; default message [department]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'cn.edu.svtcc.bysj.pojo.Department' for property 'department'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'cn.edu.svtcc.bysj.pojo.Department' for property 'department': no matching editors or conversion strategy found]]" />
+      <item value="Error resolving fragment: &quot;~{dashboard :: topbar}&quot;: template or fragment could not be resolved (template: &quot;emplist&quot; - line 46, col 8)" />
+      <item value="Error resolving template [login], template might not exist or might not be accessible by any of the configured Template Resolvers" />
+      <item value="Error creating bean with name 'employeeDao' defined in file [UserszhangzhouDesktopBYSJ2targetclassescnedusvtccbysjdaoEmployeeDao.class]: Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError" />
+      <item value="driver Class Loader" />
+      <item value="aaa&#10;" />
+      <item value="Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance. Cause: org.xml.sax.SAXParseException; lineNumber: 5; columnNumber: 246; 文档根元素 &quot;beans&quot; 必须匹配 DOCTYPE 根 &quot;null&quot;。" />
+      <item value="Caused by: org.springframework.beans.ConversionNotSupportedException: Failed to convert property value of type 'java.lang.String' to required type 'java.sql.Driver' for property 'driver'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'java.sql.Driver' for property 'driver': no matching editors or conversion strategy found" />
+      <item value="Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IAccountDao' defined in file [UserszhangzhouDesktopBYSJoutartifactsBYSJ_war_explodedWEB-INFclassescnedusvtccdaoIAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessonFactory' defined in class path resource [applicationContext.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [applicationContext.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.mchange.v2.c3p0.ComboPooledDataSource]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError" />
+      <item value="org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountService': Unsatisfied dependency expressed through field 'iAccountDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IAccountDao' defined in file [UserszhangzhouDesktopBYSJoutartifactsBYSJ_war_explodedWEB-INFclassescnedusvtccdaoIAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessonFactory' defined in class path resource [applicationContext.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [applicationContext.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.mchange.v2.c3p0.ComboPooledDataSource]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError" />
+      <item value="Error querying database. Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!" />
+      <item value="com.mchange.v2.resourcepool.CannotAcquireResourceException: A ResourcePool could not acquire a resource from its primary factory or source." />
+      <item value="Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!" />
+      <item value="Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database! com.mchange.v2.resourcepool.CannotAcquireResourceException: A ResourcePool could not acquire a resource from its primary factory or source." />
+      <item value="Could not open ServletContext resource [jdbc.properties]" />
+      <item value="Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [jdbc.properties] cannot be opened because it does not exist at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFact" />
+      <item value="Table 'javabs.account' doesn't exist" />
+      <item value="POOLED" />
+      <item value="To change this template use File | Settings | File Templates." />
+      <item value="Character Encoding Filter" />
+      <item value="Class 'IAccountdao' is public, should be declared in a file named 'IAccountdao.java'" />
+      <item value="TODO" />
+      <item value="description" />
+      <item value="Error during artifact deployment. See server log for details." />
+      <item value="Serializable" />
+      <item value="Access denied for user 'root'@'localhost' (using password: YES)" />
+      <item value="Access denied for user 'root'@'localhost' (using password: YES) at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_302] at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_302] at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_302] at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_302]" />
+      <item value="Could not create connection to database server. Attempted reconnect 3 times. Giving up." />
+      <item value="content Type" />
+    </histories>
+    <option name="languageScores">
+      <map>
+        <entry key="CHINESE" value="51" />
+        <entry key="ENGLISH" value="52" />
+        <entry key="ESTONIAN" value="1" />
+        <entry key="SPANISH" value="1" />
+      </map>
+    </option>
+  </component>
+  <component name="Cache">
+    <option name="lastTrimTime" value="1635050517650" />
+  </component>
+  <component name="Settings">
+    <option name="baiduTranslateSettings">
+      <app-key>
+        <option name="appId" value="20210917000948195" />
+      </app-key>
+    </option>
+    <option name="translator" value="BAIDU" />
+  </component>
+</application>
