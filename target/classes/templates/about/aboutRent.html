@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>租车须知</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/page-aboutRent.css" type="text/css">
+    <script>
+        window.onload=function(){
+            let all=document.getElementsByClassName("href");
+            for(let i=0;i<all.length;i++){
+                all[i].onclick=function(){
+                    let allC=document.getElementsByClassName("details");
+                    for(let j=0;j<allC.length;j++){
+                        if(all[i].innerText==allC[j].getElementsByTagName("h1")[0].innerText){
+                            // alert(all[i].innerText);
+                            // alert(allC[j].getElementsByTagName("h1")[0].innerText);
+                            document.getElementsByClassName("news")[0].style.display = "none";
+                            allC[j].style.display = "block";
+                        }
+                    }
+                }
+            }
+            let ret = document.getElementsByClassName("return");
+            for(let i=0;i<all.length;i++){
+                ret[i].onclick=function(){
+                    document.getElementsByClassName("news")[0].style.display = "block";
+                    this.parentNode.style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--头部-->
+    <div class="header w">
+        <!--创建导航条-->
+        <ul class="nav">
+            <li>
+                <a href="aboutRent.html">租车须知</a>
+                <p>ABOUT RENT</p>
+            </li>
+            <li>
+                <a href="weekSpecials.html">本周特价</a>
+                <p>WEEK SPECIALS</p>
+            </li>
+            <li>
+                <a href="manageLogin.html">管理员登录</a>
+                <p>ADMINISTRATOR LOGIN</p>
+            </li>
+            <li>
+                <a href="aboutUs.html">关于我们</a>
+                <p>ABOUT US</p>
+            </li>
+            <li>
+                <a href="contactUs.html">在线留言</a>
+                <p>CONTACT US</p>
+            </li>
+        </ul>
+        
+        <div class="logo">
+            <a href="index.html" title="一个牛逼的网站">
+                <img src="img/logo.jpg" alt="网站的logo">
+            </a>
+        </div>  
+
+        <div class="user">
+            <label>欢迎你，XXXX</label>&nbsp;&nbsp;/
+            <a href="userLogin.html">退出登录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="userLogin.html">用户登录</a>&nbsp;/&nbsp;
+            <a href="userRegister.html">用户注册</a>
+        </div>
+    </div>
+
+    <!--网站主内容-->
+    <div class="content w clearfix">
+        <div class="contents">
+            <div class="title">
+                <label>租车资讯</label>
+            </div>
+            <div class="news">
+                <div><a href="javascript:void(0);" class="href">顺风车规则</a></div><hr>
+                <div><a href="javascript:void(0);" class="href">长租服务详情</a></div><hr>
+                <div><a href="javascript:void(0);" class="href">企业租车详情</a></div><hr>
+                <div><a href="javascript:void(0);" class="href">待租车况需知</a></div><hr>
+                <div><a href="javascript:void(0);" class="href">租车资格需知</a></div><hr>
+                <div><a href="javascript:void(0);" class="href">取还车流程</a></div><hr>
+            </div>
+            <div class="details" style="display: none;">
+                <h1>顺风车规则</h1><br/><br/>
+                1.	顺风车产品需在预订时预付全款，预付后不能退改；<br/>
+                2.	顺风车产品，取还城市不能更改；<br/>
+                3.	限租期内，优惠后总金额含车辆租赁及服务费、基础服务费、车辆整备费；<br/>
+                4.	如需可选服务，另外计费；<br/>
+                5.	超出限制里程，按1元/公里收取超里程服务费；<br/>
+                6.	超出限制租期，需支付超时服务费：超时4小时以内，按小时收取超时服务费，每小时赠送20km里程；超时4小时以上，按正常价格按天收取车辆租赁及服务费、基础服务及可选服务等费用，同时赠送不限里程；<br/>
+                7.	顺风车产品不与其他优惠活动同时享受。<br/><br/><br/>
+                <a href="javascript:void(0);" class="return">返回资讯列表</a>
+            </div>
+            <div class="details" style="display: none;">
+                <h1>长租服务详情</h1><br/><br/>
+                价格更低<br/>
+                网上直销，即刻报价，快捷透明。<br/>
+                租期更灵活<br/>
+                3 个月以上，尽享长租优惠。<br/>
+                服务更优<br/>
+                专业化团队，强大系统支持，<br/>
+                全国化网络，24小时服务。<br/><br/><br/>
+                <a href="javascript:void(0);" class="return">返回资讯列表</a>
+            </div>
+            <div class="details" style="display: none;">
+                <h1>企业租车详情</h1><br/><br/>
+                一个合同全国用车<br/>
+                使用灵活便捷高效<br/>
+                按需付费无需浪费<br/>
+                管理帮手决策依据<br/>
+                全国范围，不限里程，提供维修保养代步车，提供上门服务，24小时救援及中英文客服<br/><br/><br/>
+                <a href="javascript:void(0);" class="return">返回资讯列表</a>
+            </div>
+            <div class="details" style="display: none;">
+                <h1>待租车况需知</h1><br/><br/>
+                我们竭诚为您提供安全、舒适、整洁的车辆：<br/>
+                1. 如无特殊情况，出车时油箱满油；<br/>
+                2. 车辆定期保养检修及安全检查，无重大事故及安全隐患；<br/>
+                3. 车身外观、内饰、性能：<br/>
+                　(1)　车身清洁，内饰干净、无破损；<br/>
+                　(2)　轮胎完好，无鼓包，胎面无明显偏磨；<br/>
+                　(3)　备胎、灭火器、故障警示牌、随车工具等齐全完好；<br/>
+                　(4)　行驶本、保单复印件、交强险标、年检标志等齐全并有效放置、粘贴；<br/>
+                　(5)　车辆性能（灯光、仪表、空调、玻璃水、电瓶等）正常。<br/><br/><br/>
+                <a href="javascript:void(0);" class="return">返回资讯列表</a>
+            </div>
+            <div class="details" style="display: none;">
+                <h1>租车资格需知</h1><br/><br/>
+                租车前，请确认您满足以下条件、持有以下证件：<br/>
+                1. 年龄要求：年满18周岁<br/>
+                2. 证件要求：<br/>
+                　A. 首次取车时，请出示以下证件的原件：<br/>
+                　　(1)　本人的有效身份证件<br/>
+                　　　　a) 境内客户：二代身份证<br/>
+                　　　　b) 港澳客户：港澳居民来往内地通行证（回乡证）<br/>
+                　　　　c) 台湾客户：大陆通行证（台胞证）<br/>
+                　　　　d) 外籍客户：护照，签证/居住证<br/>
+                　　(2)　本人国内有效驾驶证<br/>
+                　　(3)　有效信用卡（本人）<br/>
+                　　　　a) 有效信用卡指有效期内的中国国内银行发行的信用卡，或国外银行发行的带有VISA、Master、JCB标志的有磁条外卡；<br/>
+                　　　　b) 在您本人有信用卡并且信用额度足够时，可租所有车型；<br/>
+                　　　　c) 如您本人无信用卡，可通过持有信用卡的亲友进行担保 ，可租所有车型 。<br/>
+                　　(4)　其他说明：<br/>
+                　　　　a) 因违章等后续处理需要，以上证件，有效期须至少超过当次租期的一个月以上（非大陆客户两个月以上）；<br/>
+                　　　　b) 身份证件须通过公安局等相关机构验证，且验证结果与客户身份、头像一致；<br/>
+                　　　　c) 港澳台客户或外籍客户，首次租车时请提前一个工作日提交证件扫描件；<br/>
+                　　　　d) 中国大陆客户，请持国内信用卡租车。<br/>
+                　B.自第二次租车开始，您仅需出示驾照原件即可，无需再提供身份证件；标准预授权5000元及以下的车型，支持使用国内借记卡（本人或他人）<br/>
+                　　支付与租车预授权相等额度的押金。<br/><br/><br/>
+                <a href="javascript:void(0);" class="return">返回资讯列表</a>
+            </div>
+            <div class="details" style="display: none;">
+                <h1>取还车流程</h1><br/><br/>
+                <img src="img/rentright.jpg" alt="流程"><br/><br/><br/>
+                <a href="javascript:void(0);" class="return">返回资讯列表</a>
+            </div>
+            <div class="pageNum">
+                <ul>
+                    <li><a href="">首页</a></li>
+                    <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                    <li><a href="javascript:;">末页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--网站底部-->
+    <div class="footer">
+        <div class="w">
+            <p><a href="index.html">网站主页</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="aboutUs.html">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="aboutRent.html">租车须知</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="weekSpecials.html">本周特价</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="contactUs.html">在线留言</a></p>
+            <br/>
+            <p>版权所有 YangfanJack1024</p>
+            <br/>
+            <p><a href="Mailto:yangfanjack1024@qq.com">如果您对该汽车租赁网站有任何意见，点击这里发送邮件给我们。</a></p> 
+        </div>
+    </div>
+</body>
+</html>

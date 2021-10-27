@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/page-manageFunc.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/a.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <div class="header w">
+        <!--创建导航条-->
+        <ul class="nav">
+            <li>
+                <a href="aboutRent.html">租车须知</a>
+                <p>ABOUT RENT</p>
+            </li>
+            <li>
+                <a href="weekSpecials.html">本周特价</a>
+                <p>WEEK SPECIALS</p>
+            </li>
+            <li>
+                <a href="manageLogin.html">管理员登录</a>
+                <p>ADMINISTRATOR LOGIN</p>
+            </li>
+            <li>
+                <a href="aboutUs.html">关于我们</a>
+                <p>ABOUT US</p>
+            </li>
+            <li>
+                <a href="contactUs.html">在线留言</a>
+                <p>CONTACT US</p>
+            </li>
+        </ul>
+        
+        <div class="logo">
+            <a href="index.html" title="一个牛逼的网站">
+                <img src="img/logo.jpg" alt="网站的logo">
+            </a>
+        </div>  
+
+        <div class="user">
+            <label>欢迎你，XXXX</label>&nbsp;&nbsp;/
+            <a href="userLogin.html">退出登录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="userLogin.html">用户登录</a>&nbsp;/&nbsp;
+            <a href="userRegister.html">用户注册</a>
+        </div>
+    </div>
+
+    <!--网站主内容-->
+    <div class="content w clearfix">
+        <div class="top">
+            <div class="tab0" id="tab0">
+                <ul class="nav1">
+                    <li id="one0" onclick="block();setTab('one',0)">
+                        <a href="#"><img src="img/1.png">
+                            <p>首页</p>
+                        </a>
+                    </li>
+                    <li id="one1" onclick="none();setTab('one',1)">
+                        <a href="#"><img src="img/4.png">
+                            <p>车辆管理</p>
+                        </a>
+                    </li>
+                    <li id="one2" onclick="none();setTab('one',2)">
+                        <a href="#"><img src="img/5.png">
+                            <p>查看订单</p>
+                        </a>
+                    </li>
+                    <li id="one3" onclick="none();setTab('one',3)">
+                        <a href="#"><img src="img/6.png">
+                            <p>查看留言</p>
+                        </a>
+                    </li>
+                    <li id="one4" onclick="none();setTab('one',4)">
+                        <a href="#"><img src="img/7.png">
+                            <p>人员管理</p>
+                        </a>
+                    </li>
+                    <li id="one5" onclick="none();setTab('one',5)">
+                        <a href="#"><img src="img/8.png">
+                            <p>资讯管理</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+    
+        <div class="content1 con_one" id="con_one_0" style="display:block;">
+            <div class="hyy">
+                <p></p>
+            </div>
+        </div>
+    
+    
+        <div class="content1 con_one" id="con_one_1" style="display:none;">
+            <div class="left-column">
+                <div class="service">
+                    <h5>车辆管理</h5>
+                </div>
+                <div class="tab1" id="tab1">
+                    <ul class="call">
+                        <li id="colum1" onclick="setTab('colum',1)"><a href="#">短租自驾</a></li>
+                        <li id="colum2" onclick="setTab('colum',2)"><a href="#">长租服务</a></li>
+                        <li id="colum3" onclick="setTab('colum',3)"><a href="#">企业租车</a></li>
+                        <li id="colum4" onclick="setTab('colum',4)"><a href="#">顺风车站</a></li>
+                        <li id="colum5" onclick="setTab('colum',5)"><a href="#">特价车型</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="collection">
+                <div class="right-content con_colum" id="con_colum_1" style="display:block">
+                    <form class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <button type="submit" href="javascript:void(0);" id="search-button" class="search-button">搜索</button>
+                    </form>
+                    <button class="add" style="float: right;margin: 20px 60px;width: 80px;height: 34px;background: #ffc900;border: none;font-size: 15px;font-weight: bold;" onclick="tan()">添加车辆</button>
+                    <table>
+                        <tr>
+                            <th>车名</th>
+                            <th>展示</th>
+                            <th>类型</th>
+                            <th>特价</th>
+                            <th>价格</th>
+                            <th>详情</th>
+                            <th>修改</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>大众朗逸</div>
+                            </td>
+                            <td>
+                                <div><img src="img/大众朗逸.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>别克英朗</div>
+                            </td>
+                            <td>
+                                <div><img src="img/别克英朗.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>丰田雷凌</div>
+                            </td>
+                            <td>
+                                <div><img src="img/丰田雷凌.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-content con_colum" id="con_colum_2" style="display:none">
+                    <div class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <a href="javascript:void(0);" id="search-button" class="search-button">搜索</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>车名</th>
+                            <th>展示</th>
+                            <th>类型</th>
+                            <th>特价</th>
+                            <th>价格</th>
+                            <th>详情</th>
+                            <th>修改</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>大众朗逸</div>
+                            </td>
+                            <td>
+                                <div><img src="img/大众朗逸.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>别克英朗</div>
+                            </td>
+                            <td>
+                                <div><img src="img/别克英朗.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>丰田雷凌</div>
+                            </td>
+                            <td>
+                                <div><img src="img/丰田雷凌.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-content con_colum" id="con_colum_3" style="display:none">
+                    <div class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <a href="javascript:void(0);" id="search-button" class="search-button">搜索</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>车名</th>
+                            <th>展示</th>
+                            <th>类型</th>
+                            <th>特价</th>
+                            <th>价格</th>
+                            <th>详情</th>
+                            <th>修改</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>大众朗逸</div>
+                            </td>
+                            <td>
+                                <div><img src="img/大众朗逸.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>别克英朗</div>
+                            </td>
+                            <td>
+                                <div><img src="img/别克英朗.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>丰田雷凌</div>
+                            </td>
+                            <td>
+                                <div><img src="img/丰田雷凌.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-content con_colum" id="con_colum_4" style="display:none">
+                    <div class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <a href="javascript:void(0);" id="search-button" class="search-button">搜索</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>车名</th>
+                            <th>展示</th>
+                            <th>类型</th>
+                            <th>特价</th>
+                            <th>价格</th>
+                            <th>详情</th>
+                            <th>下单</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>大众朗逸</div>
+                            </td>
+                            <td>
+                                <div><img src="img/大众朗逸.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>别克英朗</div>
+                            </td>
+                            <td>
+                                <div><img src="img/别克英朗.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>丰田雷凌</div>
+                            </td>
+                            <td>
+                                <div><img src="img/丰田雷凌.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-content con_colum" id="con_colum_5" style="display:none">
+                    <div class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <a href="javascript:void(0);" id="search-button" class="search-button">搜索</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>车名</th>
+                            <th>展示</th>
+                            <th>类型</th>
+                            <th>特价</th>
+                            <th>价格</th>
+                            <th>详情</th>
+                            <th>修改</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>大众朗逸</div>
+                            </td>
+                            <td>
+                                <div><img src="img/大众朗逸.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>别克英朗</div>
+                            </td>
+                            <td>
+                                <div><img src="img/别克英朗.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>丰田雷凌</div>
+                            </td>
+                            <td>
+                                <div><img src="img/丰田雷凌.jpg"></div>
+                            </td>
+                            <td>
+                                <div>短租自驾</div>
+                            </td>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>￥329/日</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看详情</button></div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">修改</button></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="content1 con_one" id="con_one_2" style="display:none;">
+            <div class="left-column">
+                <div class="service">
+                    <h5>查看订单</h5>
+                </div>
+                <div class="tab2" id="tab2">
+                    <ul class="call">
+                        <li id="colm1" onclick="setTab('colm',1)"><a href="#">待审订单</a></li>
+                        <li id="colm2" onclick="setTab('colm',2)"><a href="#">历史订单</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="collection">
+                <div class="right-content con_colm" id="con_colm_1" style="display:block">
+                    <div class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <a href="javascript:void(0);" id="search-button" class="search-button">搜索</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>订单编号</th>
+                            <th>车型</th>
+                            <th>提交时间</th>
+                            <th>租赁时间</th>
+                            <th>城市</th>
+                            <th>订单状态</th>
+                            <th>总价</th>
+                            <th>确认</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>1</div>
+                            </td>
+                            <td>
+                                <div>大众朗逸</div>
+                            </td>
+                            <td>
+                                <div>2020-05-05</div>
+                            </td>
+                            <td>
+                                <div>7天</div>
+                            </td>
+                            <td>
+                                <div>北京</div>
+                            </td>
+                            <td>
+                                <div>未确认</div>
+                            </td>
+                            <td>
+                                <div>￥2500</div>
+                            </td>
+                            <td>
+                                <div><button>确认</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>2</div>
+                            </td>
+                            <td>
+                                <div>丰田雷凌</div>
+                            </td>
+                            <td>
+                                <div>2020-05-05</div>
+                            </td>
+                            <td>
+                                <div>15天</div>
+                            </td>
+                            <td>
+                                <div>成都</div>
+                            </td>
+                            <td>
+                                <div>未确认</div>
+                            </td>
+                            <td>
+                                <div>￥5000</div>
+                            </td>
+                            <td>
+                                <div><button>确认</button></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-content con_colm" id="con_colm_2" style="display:none">
+                    <div class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <a href="javascript:void(0);" id="search-button" class="search-button">搜索</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>订单编号</th>
+                            <th>车型</th>
+                            <th>提交时间</th>
+                            <th>租赁时间</th>
+                            <th>城市</th>
+                            <th>下单状态</th>
+                            <th>总价</th>
+                            <th>确认</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>1</div>
+                            </td>
+                            <td>
+                                <div>大众朗逸</div>
+                            </td>
+                            <td>
+                                <div>2020-05-05</div>
+                            </td>
+                            <td>
+                                <div>7天</div>
+                            </td>
+                            <td>
+                                <div>北京</div>
+                            </td>
+                            <td>
+                                <div>已确认</div>
+                            </td>
+                            <td>
+                                <div>￥2500</div>
+                            </td>
+                            <td>
+                                <div><button>确认</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>2</div>
+                            </td>
+                            <td>
+                                <div>丰田雷凌</div>
+                            </td>
+                            <td>
+                                <div>2020-05-05</div>
+                            </td>
+                            <td>
+                                <div>15天</div>
+                            </td>
+                            <td>
+                                <div>成都</div>
+                            </td>
+                            <td>
+                                <div>已确认</div>
+                            </td>
+                            <td>
+                                <div>￥5000</div>
+                            </td>
+                            <td>
+                                <div><button>确认</button></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content1 con_one" id="con_one_3" style="display:none;">
+            <div class="left-column">
+                <div class="service">
+                    <h5>查看留言</h5>
+                </div>
+                <div class="tab3" id="tab3">
+                    <ul class="call">
+                        <li id="coln1" onclick="setTab('coln',1)"><a href="#">待读留言</a></li>
+                        <li id="coln2" onclick="setTab('coln',2)"><a href="#">已读留言</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="collection">
+                <div class="right-content con_coln" id="con_coln_1" style="display:block">
+                    <div class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <a href="javascript:void(0);" id="search-button" class="search-button">搜索</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>留言编号</th>
+                            <th>留言姓名</th>
+                            <th>留言邮箱</th>
+                            <th>留言主题</th>
+                            <th>留言内容</th>
+                            <th>留言时间</th>
+                            <th>是否阅读</th>
+                            <th>确认已读</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>1</div>
+                            </td>
+                            <td>
+                                <div>张三</div>
+                            </td>
+                            <td>
+                                <div>111111@qqc.om</div>
+                            </td>
+                            <td>
+                                <div>改进意见</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看内容</button></div>
+                            </td>
+                            <td>
+                                <div>2020-05-05</div>
+                            </td>
+                            <td>
+                                <div>未读</div>
+                            </td>
+                            <td>
+                                <div><button>标为已读</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>2</div>
+                            </td>
+                            <td>
+                                <div>李四</div>
+                            </td>
+                            <td>
+                                <div>2020-05-05</div>
+                            </td>
+                            <td>
+                                <div>加油老铁</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看内容</button></div>
+                            </td>
+                            <td>
+                                <div>2020-05-05</div>
+                            </td>
+                            <td>
+                                <div>未读</div>
+                            </td>
+                            <td>
+                                <div><button>标为已读</button></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-content con_coln" id="con_coln_2" style="display:none">
+                    <div class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <a href="javascript:void(0);" id="search-button" class="search-button">搜索</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>留言编号</th>
+                            <th>留言姓名</th>
+                            <th>留言邮箱</th>
+                            <th>留言主题</th>
+                            <th>留言内容</th>
+                            <th>留言时间</th>
+                            <th>是否阅读</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>1</div>
+                            </td>
+                            <td>
+                                <div>张三</div>
+                            </td>
+                            <td>
+                                <div>111111@qqc.om</div>
+                            </td>
+                            <td>
+                                <div>改进意见</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看内容</button></div>
+                            </td>
+                            <td>
+                                <div>2020-05-05</div>
+                            </td>
+                            <td>
+                                <div>已读</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>2</div>
+                            </td>
+                            <td>
+                                <div>李四</div>
+                            </td>
+                            <td>
+                                <div>2020-05-05</div>
+                            </td>
+                            <td>
+                                <div>加油老铁</div>
+                            </td>
+                            <td>
+                                <div><button onclick="tan()">查看内容</button></div>
+                            </td>
+                            <td>
+                                <div>2020-05-05</div>
+                            </td>
+                            <td>
+                                <div>已读</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content1 con_one" id="con_one_4" style="display:none;">
+            <div class="left-column">
+                <div class="service">
+                    <h5>人员管理</h5>
+                </div>
+                <div class="tab4" id="tab4">
+                    <ul class="call">
+                        <li id="colu1" onclick="setTab('colu',1)"><a href="#">用户管理</a></li>
+                        <li id="colu2" onclick="setTab('colu',2)"><a href="#">管理员管理</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="collection">
+                <div class="right-content con_colu" id="con_colu_1" style="display:block">
+                    <div class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <a href="javascript:void(0);" id="search-button" class="search-button">搜索</a>
+                    </div>
+                    <button class="add" style="float: right;margin: 20px 60px;width: 80px;height: 34px;background: #ffc900;border: none;font-size: 15px;font-weight: bold;" onclick="tan()">添加用户</button>
+                    <table>
+                        <tr>
+                            <th>用户编号</th>
+                            <th>用户名</th>
+                            <th>用户密码</th>
+                            <th>删除用户</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>1</div>
+                            </td>
+                            <td>
+                                <div>jack</div>
+                            </td>
+                            <td>
+                                <div>111111</div>
+                            </td>
+                            <td>
+                                <div><button>删除用户</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>2</div>
+                            </td>
+                            <td>
+                                <div>sam</div>
+                            </td>
+                            <td>
+                                <div>222222</div>
+                            </td>
+                            <td>
+                                <div><button>删除用户</button></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-content con_colu" id="con_colu_2" style="display:none">
+                    <div class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <a href="javascript:void(0);" id="search-button" class="search-button">搜索</a>
+                    </div>
+                    <button class="add" style="float: right;margin: 20px 60px;width: 80px;height: 34px;background: #ffc900;border: none;font-size: 15px;font-weight: bold;" onclick="tan()">添加管理员</button>
+                    <table>
+                        <tr>
+                            <th>管理员编号</th>
+                            <th>管理员名字</th>
+                            <th>管理员名</th>
+                            <th>管理员密码</th>
+                            <th>删除用户</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>1</div>
+                            </td>
+                            <td>
+                                <div>杨凡</div>
+                            </td>
+                            <td>
+                                <div>admin</div>
+                            </td>
+                            <td>
+                                <div>111</div>
+                            </td>
+                            <td>
+                                <div><button>删除管理员</button></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content1 con_one" id="con_one_5" style="display:none;">
+            <div class="left-column">
+                <div class="service">
+                    <h5>资讯管理</h5>
+                </div>
+                <div class="tab5" id="tab5">
+                    <ul class="call">
+                        <li id="colx1" onclick="setTab('colx',1)"><a href="#">资讯管理</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="collection">
+                <div class="right-content con_colx" id="con_colx_1" style="display:block">
+                    <div class="search">
+                        <input id="search-input" name="" type="text" placeholder="关键词" class="search_input" autocomplete="off">
+                        <a href="javascript:void(0);" id="search-button" class="search-button">搜索</a>
+                    </div>
+                    <button class="add" style="float: right;margin: 20px 60px;width: 80px;height: 34px;background: #ffc900;border: none;font-size: 15px;font-weight: bold;" onclick="tan()">添加用户</button>
+                    <table>
+                        <tr>
+                            <th>资讯编号</th>
+                            <th>资讯标题</th>
+                            <th>资讯内容</th>
+                            <th>删除资讯</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>1</div>
+                            </td>
+                            <td>
+                                <div>顺丰车规则</div>
+                            </td>
+                            <td>
+                                <div><button>查看资讯</button></div>
+                            </td>
+                            <td>
+                                <div><button>删除资讯</button></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>2</div>
+                            </td>
+                            <td>
+                                <div>企业租车规则</div>
+                            </td>
+                            <td>
+                                <div><button>查看资讯</button></div>
+                            </td>
+                            <td>
+                                <div><button>删除资讯</button></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pageNum">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">上一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="threeword"><a href="javascript:void(0);">下一页</a></li>
+                            <li><a href="javascript:;">末页</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class="zhezhao" id='zhezhao' style="display:none;">
+            <div class="tankuang">
+                <div id="header">
+                    <span>我是弹窗</span>
+                    <div id="header-right" onclick="hidder()">x</div>
+                </div>
+                <div class="form">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--网站底部-->
+    <div class="footer">
+        <div class="w">
+            <p><a href="index.html">网站主页</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="aboutUs.html">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="aboutRent.html">租车须知</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="weekSpecials.html">本周特价</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="contactUs.html">在线留言</a></p>
+            <br/>
+            <p>版权所有 YangfanJack1024</p>
+            <br/>
+            <p><a href="Mailto:yangfanjack1024@qq.com">如果您对该汽车租赁网站有任何意见，点击这里发送邮件给我们。</a></p> 
+        </div>
+    </div>
+</body>
+</html>

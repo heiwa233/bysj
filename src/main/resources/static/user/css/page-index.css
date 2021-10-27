@@ -1,0 +1,310 @@
+body{
+    background: url("../img/0.png") repeat-x;
+    /*height: 3000px;*/
+}
+
+.w{      /*固定元素宽度*/
+    width: 1000px;
+    margin: 0px auto;
+}
+/*解决高度塌陷问题和父子元素垂直外边距重叠问题*/
+
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    /* background-color: green; */
+}
+
+.logo{
+    margin-left: 15px;
+}
+
+.nav{
+    float: right;
+    margin-top: 22px;
+}
+
+.user{
+    float: right;
+    margin-right: 40px;
+    /* background-color: red; */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.user a{
+    text-decoration: none;
+    
+}
+
+.user a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+.nav li{
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px #d6d6d6 dotted;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/*设置导航条链接样式*/
+.nav a{
+    font: bold 15px Georgia;
+    color: #666;
+    text-decoration: none;
+}
+
+/*chrome中字体最小12px*/
+.nav p{
+    color: #b7b7b7;
+    font: 11px tahoma;
+}
+
+.nav a:hover{
+    color: #a1a1a1;
+    text-decoration: underline;
+}
+
+
+/* 轮播图样式 */
+.banner{
+    height: 350px;
+    background: url("../img/00.png") no-repeat bottom center;
+    position: relative;
+    filter: drop-shadow(-10px 10px 10px rgba(26,58,70,0.7));
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+#imgList{
+    /* width: 4080px; */
+    position: absolute;
+    /* left: -1020px; */
+}
+
+#imgList li{
+    float: left;
+    margin: 0 10px;
+}
+
+.pointerDIV{
+    position: absolute;
+    /*需要同时给banner开启相对定位*/
+    top: 314px;
+    left: 15px;
+}
+.pointerDIV a{
+    width: 17px;
+    height: 17px;
+    background-color: red;
+    float: left;
+    background: url("../img/dot1.png") no-repeat;
+    margin-left: 4px;
+}
+
+.pointerDIV .active,
+.pointerDIV a:hover{
+    background: url("../img/dot2.png") no-repeat;
+}
+
+
+
+/*底部栏样式*/
+.footer{
+    height: 173px;
+    background-color: #333;
+    border-top: 10px solid #4c4c4c;
+}
+
+.footer a,.footer p{
+    color: #999;
+    font: 11px;
+    text-decoration: none;
+}
+
+.footer .w{
+    padding-top: 30px;
+    
+}
+
+.footer p{
+    text-align: center;
+}
+
+.footer a:hover{
+    color: #cccaca;
+    text-decoration: underline;
+}
+
+
+/* 主内容 */
+.content h1{
+    text-align: center;
+    font: bold 24px Georgia;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    background: url("../img/00.png") no-repeat bottom center;
+}
+
+.content .specials{
+    width: 320px;
+    /* background-color: yellow; */
+    float: left;
+    /* background-color: greenyellow; */
+} 
+
+.content .rent,.content .us{
+    width: 320px;
+    float: left;
+}
+
+.content .main{
+    width: 660px;
+    float: left;
+    margin-left: 20px;
+    /* background-color: greenyellow; */
+}
+
+.content .shang{
+    width: 660px;
+    height: 550px;
+}
+.content .contact{
+    width: 660px;
+    height: 350px;
+}
+
+.content .rent{
+    margin-right: 20px;
+}
+.content{
+    /*background-color: chartreuse;*/
+    /* height: 1000px; */
+    /* background-color: darkseagreen; */
+    font-size: 10px;
+}
+
+.content h2{
+    color: #11719e ;
+    font: 21px Georgia;
+}
+.content .p1{
+    color: #8c8c8c;
+    font: 12px Helvetica;
+}
+.content .imgDIV{
+    width: 320px;
+    height: 250px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    padding-top: 12px;
+    border: 2px dotted orange;
+    /* background-color: #11719e; */
+}
+.content .p2{
+    color: #3e3e3e;
+    font: 20px Helvetica;
+    font-weight: bold;
+}
+
+.content .p3{
+    margin-top: 5px;
+    color: #3e3e3e;
+    font: 20px Helvetica;
+    font-weight: bold;
+}
+
+.content .lm button{
+    width: 320px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font: 18px Georgia;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+
+.content .shang button{
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font: 14px Georgia;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.wenzi{
+    height: 450px;
+    /* background-color: #666; */
+    border: 2px dotted orange;
+}
+
+.wenzi p{
+    padding: 10px 10px;
+    /* background-color: red; */
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.feedback{
+    /* background-color: red; */
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.ui-input input,.ui-input textarea{
+    width: 290px;
+    padding: 5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.feedback button{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font: 14px Georgia;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.contact textarea{
+    height: 100px;
+    resize: none;
+}
+
+.rent .wenzi div{
+    padding: 25px 20px 0px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    /* background-color: red; */
+}
+
+.rent .wenzi hr{
+    width: 275px;
+}
+
+.rent .wenzi div a:hover{
+    color: orange;
+    text-decoration: underline;
+}

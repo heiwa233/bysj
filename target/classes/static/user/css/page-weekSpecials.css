@@ -1,0 +1,156 @@
+body{
+    background: url("../img/0.png") repeat-x;
+    /*height: 3000px;*/
+}
+
+.w{      /*固定元素宽度*/
+    width: 1000px;
+    margin: 0px auto;
+}
+/*解决高度塌陷问题和父子元素垂直外边距重叠问题*/
+
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    /* background-color: green; */
+}
+
+.logo{
+    margin-left: 15px;
+}
+
+.nav{
+    float: right;
+    margin-top: 22px;
+}
+
+.user{
+    float: right;
+    margin-right: 40px;
+    /* background-color: red; */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.user a{
+    text-decoration: none;
+    
+}
+
+.user a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+.nav li{
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px #d6d6d6 dotted;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/*设置导航条链接样式*/
+.nav a{
+    font: bold 15px Georgia;
+    color: #666;
+    text-decoration: none;
+}
+
+/*chrome中字体最小12px*/
+.nav p{
+    color: #b7b7b7;
+    font: 11px tahoma;
+}
+
+.nav a:hover{
+    color: #a1a1a1;
+    text-decoration: underline;
+}
+
+
+/*底部栏样式*/
+.footer{
+    height: 173px;
+    background-color: #333;
+    border-top: 10px solid #4c4c4c;
+}
+
+.footer a,.footer p{
+    color: #999;
+    font: 11px;
+    text-decoration: none;
+}
+
+.footer .w{
+    padding-top: 30px;
+    
+}
+
+.footer p{
+    text-align: center;
+}
+
+.footer a:hover{
+    color: #cccaca;
+    text-decoration: underline;
+}
+
+
+
+/* 主内容 */
+.ban{
+    border: 10px solid rgb(41, 41, 41);
+}
+
+
+.content .imgDIV{
+    width: 1000px;
+    height: 250px;
+    border-left: 2px solid rgb(50, 50, 50);
+    border-right: 2px solid rgb(50, 50, 50);
+    background-color: white;
+    /* background-color: #11719e; */
+}
+.content .p2{
+    width: 400px;
+    color: #3e3e3e;
+    font: 20px Helvetica;
+    font-weight: bold;
+    float: left;
+    /* background-color: red; */
+    margin-top: 50px;
+}
+
+.content .p3{
+    width: 120px;
+    color: #3e3e3e;
+    font: 30px Helvetica;
+    font-weight: bold;
+    float: left;
+    /* background-color: yellow; */
+    margin-top: 50px;
+}
+
+.content button{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid black;
+    float: right;
+    margin-top: 20px;
+}
+
+.imgDIV div{
+    width: 600px;
+    float: right;
+    margin-right: 30px;
+}

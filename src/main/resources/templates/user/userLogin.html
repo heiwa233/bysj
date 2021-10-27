@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="user/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="user/css/page-userLogin.css" type="text/css">
+    <link rel="stylesheet" href="user/css/style.css">
+    <script src="user/js/script.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <div th:insert="commons/commons::web_head"></div>
+
+    <!--网站主内容-->
+    <div class="content w clearfix">
+        <div class="rightForm">
+            <form th:action="@{loginUser}" class="form" method="post">
+                <div class="form-head">
+                    <h2>用户登录</h2>
+                </div>
+                <div align="center" style="color: red" th:text="${logMsg}" th:if="loginMsg!=null"></div>
+                <div class="form-body">
+                    <div class="ui-input">
+                        <input type="text" name="username" placeholder="帐号">
+                    </div>
+                    <div class="ui-input">
+                        <input type="password" name="password" placeholder="密码">
+                    </div>
+
+                    <p class="forget-password">
+                        <a href="">忘记密码？</a>
+                    </p>
+                    <button class="ui-button ui-button--primary">登录</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--网站底部-->
+    <div th:insert="commons/commons::web_footer"></div>
+</body>
+</html>
