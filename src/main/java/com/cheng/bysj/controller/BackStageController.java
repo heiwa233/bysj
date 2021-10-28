@@ -51,4 +51,9 @@ public class BackStageController {
     public String welcome(){
         return "backstage/welcome";
     }
+
+    @RequestMapping("/log")
+    public String log(){
+        return "backstage/log";
+    }
 }
