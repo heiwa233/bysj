@@ -52,8 +52,37 @@ public class BackStageController {
         return "backstage/welcome";
     }
 
-    @RequestMapping("/log")
-    public String log(){
-        return "backstage/log";
+    @RequestMapping("/carList")
+    public String carList(){
+        return "backstage/car/car-list";
     }
+    @RequestMapping("/orderAdd")
+    public String orderAdd(){
+        return "backstage/order/order-add";
+    }
+    @RequestMapping("/orderList")
+    public String orderList(){
+        return "backstage/order/order-list";
+    }
+
+    @RequestMapping("/memberList")
+    public String memberList(){
+        return "backstage/member/member-list";
+    }
+
+    @RequestMapping("/adminRole")
+    public String adminRole(){
+        return "backstage/admin/admin-role";
+    }
+
+
+    @RequestMapping("/roleAdd")
+    public String roleAdd(){
+        return "backstage/role-add";
+    }
+    @RequestMapping("/demo.html")
+    public String demo(){
+        return "backstage/demo";
+    }
+
 }

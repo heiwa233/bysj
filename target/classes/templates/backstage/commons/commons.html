@@ -3,44 +3,21 @@
 <!-- 顶部开始 -->
 <div class="container" th:fragment="top_head">
     <div class="logo">
-        <a href="./index.html">X-admin v2.2</a></div>
+        <a href="/manageIndex">管理系统</a></div>
     <div class="left_open">
         <a><i title="展开左侧栏" class="iconfont">&#xe699;</i></a>
     </div>
-    <ul class="layui-nav left fast-add" lay-filter="">
-        <li class="layui-nav-item">
-            <a href="javascript:;">+新增</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a onclick="xadmin.open('最大化','http://www.baidu.com','','',true)">
-                        <i class="iconfont">&#xe6a2;</i>弹出最大化</a></dd>
-                <dd>
-                    <a onclick="xadmin.open('弹出自动宽高','http://www.baidu.com')">
-                        <i class="iconfont">&#xe6a8;</i>弹出自动宽高</a></dd>
-                <dd>
-                    <a onclick="xadmin.open('弹出指定宽高','http://www.baidu.com',500,300)">
-                        <i class="iconfont">&#xe6a8;</i>弹出指定宽高</a></dd>
-                <dd>
-                    <a onclick="xadmin.add_tab('在tab打开','member-list.html')">
-                        <i class="iconfont">&#xe6b8;</i>在tab打开</a></dd>
-                <dd>
-                    <a onclick="xadmin.add_tab('在tab打开刷新','member-del.html',true)">
-                        <i class="iconfont">&#xe6b8;</i>在tab打开刷新</a></dd>
-            </dl>
-        </li>
-    </ul>
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item">
             <a href="javascript:;">admin</a>
             <dl class="layui-nav-child">
                 <!-- 二级菜单 -->
                 <dd>
-                    <a onclick="xadmin.open('个人信息','http://www.baidu.com')">个人信息</a></dd>
+                    <a onclick="xadmin.open('个人信息','https://www.baidu.com')">个人信息</a></dd>
                 <dd>
-                    <a onclick="xadmin.open('切换帐号','http://www.baidu.com')">切换帐号</a></dd>
+                    <a onclick="xadmin.open('切换帐号','https://www.baidu.com')">切换帐号</a></dd>
                 <dd>
-                    <a href="./login.html">退出</a></dd>
+                    <a href="/manageLogin">退出</a></dd>
             </dl>
         </li>
         <li class="layui-nav-item to-index">
@@ -106,14 +83,9 @@
                     <i class="iconfont nav_right">&#xe697;</i></a>
                 <ul class="sub-menu">
                     <li>
-                        <a onclick="xadmin.add_tab('订单列表','order-list.html')">
+                        <a onclick="xadmin.add_tab('订单列表','orderList')">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>订单列表</cite></a>
-                    </li>
-                    <li>
-                        <a onclick="xadmin.add_tab('订单列表1','order-list1.html')">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>订单列表1</cite></a>
                     </li>
                 </ul>
             </li>
@@ -142,7 +114,7 @@
                             <cite>管理员列表</cite></a>
                     </li>
                     <li>
-                        <a onclick="xadmin.add_tab('角色管理','admin-role.html')">
+                        <a onclick="xadmin.add_tab('角色管理','adminRole')">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>角色管理</cite></a>
                     </li>
@@ -165,14 +137,27 @@
                     <i class="iconfont nav_right">&#xe697;</i></a>
                 <ul class="sub-menu">
                     <li>
-                        <a href="login.html" target="_blank">
+                        <a onclick="xadmin.add_tab('示例页面','demo.html')">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>登录页面</cite></a>
+                            <cite>示例页面</cite></a>
                     </li>
                     <li>
-                        <a onclick="xadmin.add_tab('错误页面','error.html')">
+                        <a onclick="xadmin.add_tab('更新日志','log.html')">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>错误页面</cite></a>
+                            <cite>更新日志</cite></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont left-nav-li" lay-tips="车辆管理">&#xe6e3;</i>
+                    <cite>车辆管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i></a>
+                <ul class="sub-menu">
+                    <li>
+                        <a onclick="xadmin.add_tab('车辆列表','carList')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>车辆列表</cite></a>
                     </li>
                     <li>
                         <a onclick="xadmin.add_tab('示例页面','demo.html')">
@@ -185,8 +170,6 @@
                             <cite>更新日志</cite></a>
                     </li>
                 </ul>
-            </li>
-           
         </ul>
     </div>
 </div>
