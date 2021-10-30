@@ -3,6 +3,9 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="支付状态" />
+      <item value="description" />
+      <item value="Successfully created project 'bysj' on GitHub, but initial push failed: unable to access 'https:github.comheiwa233bysj.git': Failed to connect to github.com port 443: Operation timed out" />
       <item value="Public Key Retrieval is not allowed" />
       <item value="Could not parse as expression: &quot;csslogin.css&quot; (template: &quot;backstagelogin&quot; - line 11, col 28)" />
       <item value="后台" />
@@ -46,25 +49,22 @@
       <item value="Character Encoding Filter" />
       <item value="Class 'IAccountdao' is public, should be declared in a file named 'IAccountdao.java'" />
       <item value="TODO" />
-      <item value="description" />
       <item value="Error during artifact deployment. See server log for details." />
       <item value="Serializable" />
       <item value="Access denied for user 'root'@'localhost' (using password: YES)" />
       <item value="Access denied for user 'root'@'localhost' (using password: YES) at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_302] at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_302] at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_302] at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_302]" />
-      <item value="Could not create connection to database server. Attempted reconnect 3 times. Giving up." />
-      <item value="content Type" />
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="51" />
-        <entry key="ENGLISH" value="52" />
+        <entry key="CHINESE" value="54" />
+        <entry key="ENGLISH" value="54" />
         <entry key="ESTONIAN" value="1" />
         <entry key="SPANISH" value="1" />
       </map>
     </option>
   </component>
   <component name="Cache">
-    <option name="lastTrimTime" value="1635050517650" />
+    <option name="lastTrimTime" value="1635513873876" />
   </component>
   <component name="Settings">
     <option name="baiduTranslateSettings">
