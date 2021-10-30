@@ -3,6 +3,7 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="Cannot determine value type from string 'zhangsan'] with root cause" />
       <item value="支付状态" />
       <item value="description" />
       <item value="Successfully created project 'bysj' on GitHub, but initial push failed: unable to access 'https:github.comheiwa233bysj.git': Failed to connect to github.com port 443: Operation timed out" />
@@ -52,12 +53,11 @@
       <item value="Error during artifact deployment. See server log for details." />
       <item value="Serializable" />
       <item value="Access denied for user 'root'@'localhost' (using password: YES)" />
-      <item value="Access denied for user 'root'@'localhost' (using password: YES) at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_302] at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_302] at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_302] at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_302]" />
     </histories>
     <option name="languageScores">
       <map>
         <entry key="CHINESE" value="54" />
-        <entry key="ENGLISH" value="54" />
+        <entry key="ENGLISH" value="55" />
         <entry key="ESTONIAN" value="1" />
         <entry key="SPANISH" value="1" />
       </map>
