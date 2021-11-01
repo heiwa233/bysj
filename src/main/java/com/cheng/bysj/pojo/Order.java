@@ -18,9 +18,11 @@ public class Order {
     private Integer id;
     private Date orderTime;
     private Integer carId;
-    private Integer userId;
+    private String username;
     private double orderPrice;
     private Date orderStartTime;
     private Date orderEndTime;
+    private String payStatus;
+    private String orderStatus;
 
 }

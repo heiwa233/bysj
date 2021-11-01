@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="x-admin-sm">
+<html class="x-admin-sm" xmlns:th="http://www.thymeleaf.org">
     
     <head>
         <meta charset="UTF-8">
@@ -63,7 +63,7 @@
                         <div class="layui-card-header">
                             <button class="layui-btn layui-btn-danger" onclick="delAll()">
                                 <i class="layui-icon"></i>批量删除</button>
-                            <button class="layui-btn" onclick="xadmin.open('添加用户','./orderAdd',800,600)">
+                            <button class="layui-btn" onclick="xadmin.open('添加用户','/orderAdd',800,600)">
                                 <i class="layui-icon"></i>添加</button></div>
                         <div class="layui-card-body ">
                             <table class="layui-table layui-form">
@@ -73,17 +73,36 @@
                                             <input type="checkbox" name="" lay-skin="primary">
                                         </th>
                                         <th>订单编号</th>
-                                        <th>收货人</th>
-                                        <th>总金额</th>
-                                        <th>应付金额</th>
-                                        <th>订单状态</th>
+                                        <th>订单创建时间</th>
+                                        <th>车辆编号</th>
+                                        <th>用户姓名</th>
+                                        <th>订单价格</th>
+                                        <th>订单开始时间</th>
+                                        <th>订单结束时间</th>
                                         <th>支付状态</th>
-                                        <th>发货状态</th>
-                                        <th>支付方式</th>
-                                        <th>下单时间</th>
+                                        <th>订单状态</th>
                                         <th>操作</th></tr>
                                 </thead>
                                 <tbody>
+                                    <tr th:each="order:${orderList}">
+                                        <td>
+                                            <input type="checkbox" name="" lay-skin="primary"></td>
+                                        <td th:text="${order.getId()}">2017009171822298053</td>
+                                        <td th:text="${#dates.format(order.orderTime,'yyyy-mm-dd hh:mm:ss')}">老王:18925139194</td>
+                                        <td th:text="${order.carId}">7829.10</td>
+                                        <td th:text="${order.username}">7854.10</td>
+                                        <td th:text="${order.orderPrice}">待确认</td>
+                                        <td th:text="${#dates.format(order.orderStartTime,'yyyy-mm-dd hh:mm:ss')}">未支付</td>
+                                        <td th:text="${#dates.format(order.orderEndTime,'yyyy-mm-dd hh:mm:ss')}">未发货</td>
+                                        <td th:text="${order.payStatus}">其他方式</td>
+                                        <td th:text=" ${order.orderStatus}">2017-08-17 18:22</td>
+                                        <td class="td-manage">
+                                            <a title="查看" th:onclick="xadmin.open('编辑','orderView/[[${order.getId()}]]')" href="javascript:;">
+                                                <i class="layui-icon">&#xe63c;</i></a>
+                                            <a title="删除" th:onclick="member_del(this,[[${order.getId()}]])" href="javascript:;">
+                                                <i class="layui-icon">&#xe640;</i></a>
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <td>
                                             <input type="checkbox" name="" lay-skin="primary"></td>
@@ -97,7 +116,7 @@
                                         <td>其他方式</td>
                                         <td>2017-08-17 18:22</td>
                                         <td class="td-manage">
-                                            <a title="查看" onclick="xadmin.open('编辑','order-view.html')" href="javascript:;">
+                                            <a title="查看" onclick="xadmin.open('编辑','orderView')" href="javascript:;">
                                                 <i class="layui-icon">&#xe63c;</i></a>
                                             <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
                                                 <i class="layui-icon">&#xe640;</i></a>
@@ -118,26 +137,7 @@
                                         <td class="td-manage">
                                             <a title="查看" onclick="xadmin.open('编辑','order-view.html')" href="javascript:;">
                                                 <i class="layui-icon">&#xe63c;</i></a>
-                                            <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-                                                <i class="layui-icon">&#xe640;</i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" lay-skin="primary"></td>
-                                        <td>2017009171822298053</td>
-                                        <td>老王:18925139194</td>
-                                        <td>7829.10</td>
-                                        <td>7854.10</td>
-                                        <td>待确认</td>
-                                        <td>未支付</td>
-                                        <td>未发货</td>
-                                        <td>其他方式</td>
-                                        <td>2017-08-17 18:22</td>
-                                        <td class="td-manage">
-                                            <a title="查看" onclick="xadmin.open('编辑','order-view.html')" href="javascript:;">
-                                                <i class="layui-icon">&#xe63c;</i></a>
-                                            <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                                            <a title="删除" th:onclick="member_del(this,${order.getId()})" href="javascript:;">
                                                 <i class="layui-icon">&#xe640;</i></a>
                                         </td>
                                     </tr>
