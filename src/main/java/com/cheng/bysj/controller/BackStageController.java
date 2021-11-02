@@ -82,9 +82,12 @@ public class BackStageController {
         model.addAttribute("orderList",orderList);
         return "backstage/order/order-list";
     }
-    @RequestMapping("/orderView/{id}")
-    public String orderView(Integer id){
+    @RequestMapping("/orderView{id}")
+    public String orderView(@PathVariable("id") Integer id,
+                            Model model){
         System.out.println("id = " + id);
+        List<Order> orderById = orderMapper.queryOrderById(id);
+        model.addAttribute("orderById",orderById);
         return "backstage/order/order-view";
     }
     @RequestMapping("delOrder/{id}")

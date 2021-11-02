@@ -12,4 +12,5 @@ import java.util.List;
 @Mapper
 public interface OrderMapper {
     List<Order> orderList(Integer storeid);
+    List<Order> queryOrderById(Integer id);
 }

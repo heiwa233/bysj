@@ -58,10 +58,10 @@
                             <input type="date" id="username" name="orderEndTime" required="" lay-verify="date" autocomplete="off" class="layui-input"></div>
                     </div>
                     <div class="layui-form-item">
-                        <label for="payStatus" class="layui-form-label">
+                        <label for="L_email" class="layui-form-label">
                             <span class="x-red">*</span>支付状态</label>
                         <div class="layui-input-inline">
-                            <select id="payStatus"  name="payStatus">
+                            <select name="payStatus">
                                 <option>未支付</option>
                                 <option>支付宝</option>
                                 <option>微信</option>
@@ -70,16 +70,10 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label for="orderStatus" class="layui-form-label">
+                        <label for="L_email" class="layui-form-label">
                             <span class="x-red">*</span>订单状态</label>
                         <div class="layui-input-inline">
-                            <select id="orderStatus"  name="payStatus">
-                                <option>未提车</option>
-                                <option>已提车</option>
-                                <option>订单已取消</option>
-                                <option>银行卡</option>
-                                <option>现金</option>
-                        </div>
+                            <input type="text" id="L_email" name="email" required="" lay-verify="email" autocomplete="off" class="layui-input"></div>
                         <div class="layui-form-mid layui-word-aux">
                             <span class="x-red">*</span></div>
                     </div>
