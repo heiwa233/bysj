@@ -3,6 +3,7 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="汽车详情" />
       <item value="template might not exist or might not be accessible by any of the configured Template Resolvers" />
       <item value="Error creating bean with name 'dataSource' defined in class path resource" />
       <item value="To display the conditions report re-run your application with 'debug' enabled." />
@@ -52,12 +53,11 @@
       <item value="Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [jdbc.properties] cannot be opened because it does not exist at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFact" />
       <item value="Table 'javabs.account' doesn't exist" />
       <item value="POOLED" />
-      <item value="To change this template use File | Settings | File Templates." />
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="61" />
-        <entry key="ENGLISH" value="62" />
+        <entry key="CHINESE" value="63" />
+        <entry key="ENGLISH" value="63" />
         <entry key="ESTONIAN" value="1" />
         <entry key="SPANISH" value="1" />
       </map>
