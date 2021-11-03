@@ -10,4 +10,6 @@ import java.util.List;
 public interface CarMapper {
     @Select("select * from car;")
     List<Car> queryAllCar();
+    @Select("select * from car where id=#{id};")
+    Car queryCarById(Integer id);
 }

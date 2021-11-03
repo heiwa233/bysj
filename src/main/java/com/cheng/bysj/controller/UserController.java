@@ -4,6 +4,7 @@ import com.cheng.bysj.mapper.CarMapper;
 import com.cheng.bysj.mapper.UserMapper;
 import com.cheng.bysj.pojo.Car;
 import com.cheng.bysj.pojo.User;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -69,7 +70,6 @@ public class UserController {
             Model model
     ){
         User queryUserByUsername = userMapper.queryUserByUsername(username);
-        System.out.println(queryUserByUsername.getPassword().equals(password));
         if (queryUserByUsername==null){
             model.addAttribute("logMsg","用户不存在");
             return "user/userLogin";
@@ -95,6 +95,17 @@ public class UserController {
         System.out.println("carList = " + carList);
         model.addAttribute("carList",carList);
         return "user/userFunc";
+    }
+    @RequestMapping("carDetails{id}")
+    public String carDetails(@PathVariable("id") Integer id){
+
+        return "user/carDetails";
+    }
+@RequestMapping("orderAdd{id}")
+    public String orderAdd(@PathVariable("id") Integer id, Model model){
+    Car queryCarById = carMapper.queryCarById(id);
+    model.addAttribute("car",queryCarById);
+    return "user/orderAdd";
     }
 
 

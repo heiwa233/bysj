@@ -86,7 +86,7 @@ public class BackStageController {
     public String orderView(@PathVariable("id") Integer id,
                             Model model){
         System.out.println("id = " + id);
-        List<Order> orderById = orderMapper.queryOrderById(id);
+        Order orderById = orderMapper.queryOrderById(id);
         model.addAttribute("orderById",orderById);
         return "backstage/order/order-view";
     }
