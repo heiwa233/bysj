@@ -3,6 +3,7 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-11-11'; nested exception is java.lang.IllegalArgumentException]" />
       <item value="汽车详情" />
       <item value="template might not exist or might not be accessible by any of the configured Template Resolvers" />
       <item value="Error creating bean with name 'dataSource' defined in class path resource" />
@@ -52,12 +53,11 @@
       <item value="Could not open ServletContext resource [jdbc.properties]" />
       <item value="Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [jdbc.properties] cannot be opened because it does not exist at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFact" />
       <item value="Table 'javabs.account' doesn't exist" />
-      <item value="POOLED" />
     </histories>
     <option name="languageScores">
       <map>
         <entry key="CHINESE" value="63" />
-        <entry key="ENGLISH" value="63" />
+        <entry key="ENGLISH" value="64" />
         <entry key="ESTONIAN" value="1" />
         <entry key="SPANISH" value="1" />
       </map>
