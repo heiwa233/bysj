@@ -1,8 +1,10 @@
 package com.cheng.bysj.controller;
 
 import com.cheng.bysj.mapper.CarMapper;
+import com.cheng.bysj.mapper.OrderMapper;
 import com.cheng.bysj.mapper.UserMapper;
 import com.cheng.bysj.pojo.Car;
+import com.cheng.bysj.pojo.Order;
 import com.cheng.bysj.pojo.User;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,6 +31,8 @@ public class UserController {
     UserMapper userMapper;
     @Autowired
     CarMapper carMapper;
+    @Autowired
+    OrderMapper orderMapper;
 
 
     @GetMapping("/regUser")
@@ -78,7 +86,7 @@ public class UserController {
             model.addAttribute("logMsg","用户密码错误");
             return "user/userLogin";
         }else {
-            session.setAttribute("username",queryUserByUsername.getNickname());
+            session.setAttribute("user",queryUserByUsername);
             return "redirect:/main.html";
         }
     }
@@ -101,11 +109,35 @@ public class UserController {
 
         return "user/carDetails";
     }
-@RequestMapping("orderAdd{id}")
+    @RequestMapping("orderAdd{id}")
     public String orderAdd(@PathVariable("id") Integer id, Model model){
-    Car queryCarById = carMapper.queryCarById(id);
-    model.addAttribute("car",queryCarById);
-    return "user/orderAdd";
+        Car queryCarById = carMapper.queryCarById(id);
+        model.addAttribute("car",queryCarById);
+        return "user/orderAdd";
+    }
+    @PostMapping("/orderAdd")
+    public String orderAdd(
+            Integer id, String carClass, Double price, String carStartTime,String carEndTime,
+            Model model,HttpSession session) throws Exception{
+
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        Date startDate=df.parse(carStartTime);
+        Date endDate=df.parse(carEndTime);
+        int i = endDate.getDate() - startDate.getDate();
+        if (i<0){
+            i=(-i);
+        }
+        User user = (User) session.getAttribute("user");
+        Order order=new Order();
+        order.setCarId(id);
+        order.setUserId(user.getId());
+        order.setOrderPrice(price*i);
+        order.setOrderStartTime(startDate);
+        order.setOrderEndTime(endDate);
+
+        Integer integer = orderMapper.insertOrder(order);
+        System.out.println("integer = " + integer);
+        return "redirect:/userFunc";
     }
 
 

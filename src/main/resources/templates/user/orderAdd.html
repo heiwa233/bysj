@@ -21,7 +21,7 @@
 <body>
 <div class="layui-fluid">
     <div class="layui-row">
-        <form class="layui-form">
+        <form class="layui-form" method="post" action="/orderAdd">
             <div class="layui-form-item">
                 <label for="carID" class="layui-form-label">
                     <span class="x-red">*</span>车辆ID</label>
@@ -33,7 +33,7 @@
                 <label for="carClass" class="layui-form-label">
                     <span class="x-red">*</span>租车类型</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="carClass" th:value="${car.car_class}" name="class" required="" lay-verify="required"
+                    <input type="text" id="carClass" th:value="${car.car_class}" name="carClass" required="" lay-verify="required"
                            autocomplete="off" class="layui-input"></div>
             </div>
             <div class="layui-form-item">
@@ -44,32 +44,35 @@
                            autocomplete="off" class="layui-input"></div>
             </div>
             <div class="layui-form-item">
-                <label for="carModel" class="layui-form-label">
+                <label for="carPrice" class="layui-form-label">
                     <span class="x-red">*</span>单日价格</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="carModel" th:value="${car.oldPrice}==null?${car.price}:${car.oldPrice}" name="price" required="" lay-verify="required"
+                    <input type="text" id="carPrice" th:value="${car.oldPrice}==null?${car.price}:${car.oldPrice}" name="price" required="" lay-verify="required"
                            autocomplete="off" class="layui-input"></div>
             </div>
             <div class="layui-form-item">
-                <label for="carModel" class="layui-form-label">
-                    <span class="x-red">*</span>车辆型号</label>
+                <label for="carStartTime" class="layui-form-label">
+                    <span class="x-red">*</span>开始时间</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="carModel" th:value="${car.model}" name="model" required="" lay-verify="required"
+                    <input type="date" id="carStartTime"  name="carStartTime" required="" lay-verify="required"
                            autocomplete="off" class="layui-input"></div>
             </div>
             <div class="layui-form-item">
-                <label for="carModel" class="layui-form-label">
-                    <span class="x-red">*</span>车辆型号</label>
+                <label for="carEndTime" class="layui-form-label">
+                    <span class="x-red">*</span>结束时间</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="carModel" th:value="${car.model}" name="model" required="" lay-verify="required"
+                    <input type="date" id="carEndTime" name="carEndTime" required="" lay-verify="required"
                            autocomplete="off" class="layui-input"></div>
             </div>
 
             <div class="layui-form-item layui-form-text">
-                <label for="desc" class="layui-form-label">描述</label>
+                <label for="desc" class="layui-form-label">备注</label>
                 <div class="layui-input-block">
                     <textarea placeholder="请输入内容" id="desc" name="desc" class="layui-textarea"></textarea>
                 </div>
+            </div>
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-filter="add" lay-submit="">提交订单</button>
             </div>
 
         </form>

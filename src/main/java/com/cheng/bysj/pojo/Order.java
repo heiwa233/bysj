@@ -2,6 +2,7 @@ package com.cheng.bysj.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
@@ -14,12 +15,14 @@ import java.util.Date;
 @Data
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Order {
     private Integer id;
     private Date orderTime;
     private Integer carId;
+    private Integer userId;
     private String username;
-    private double orderPrice;
+    private Double orderPrice;
     private Date orderStartTime;
     private Date orderEndTime;
     private String payStatus;

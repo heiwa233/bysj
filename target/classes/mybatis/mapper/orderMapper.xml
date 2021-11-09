@@ -9,5 +9,7 @@
         SELECT `Order`.id,`Order`.time,car_id, user.`name`,`Order`.price,starttime,endtime,payStatus,orderStatus FROM `Order`,`User`
         WHERE `Order`.user_id=`User`.id and car_id=#{id}
     </select>
-
+    <select id="insertOrder" parameterType="Order" resultType="Integer">
+        INSERT INTO `Order` (car_id,user_id,price,starttime,endtime)VALUES(#{carId}, #{userId},#{orderPrice}, #{orderStartTime},#{orderEndTime})
+    </select>
 </mapper>
