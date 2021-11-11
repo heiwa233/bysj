@@ -3,6 +3,7 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="Attribute &quot;name&quot; appears more than once in element" />
       <item value="Error attempting to get column 'name' from result set. Cause: java.sql.SQLDataException: Cannot determine value type from string '快乐租车'" />
       <item value="Exception evaluating SpringEL expression: &quot;orderById.id&quot; (template: &quot;backstageorderorder-view&quot; - line 29, col 40)" />
       <item value="Property or field 'id' cannot be found on null" />
@@ -52,12 +53,11 @@
       <item value="aaa&#10;" />
       <item value="Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance. Cause: org.xml.sax.SAXParseException; lineNumber: 5; columnNumber: 246; 文档根元素 &quot;beans&quot; 必须匹配 DOCTYPE 根 &quot;null&quot;。" />
       <item value="Caused by: org.springframework.beans.ConversionNotSupportedException: Failed to convert property value of type 'java.lang.String' to required type 'java.sql.Driver' for property 'driver'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'java.sql.Driver' for property 'driver': no matching editors or conversion strategy found" />
-      <item value="Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IAccountDao' defined in file [UserszhangzhouDesktopBYSJoutartifactsBYSJ_war_explodedWEB-INFclassescnedusvtccdaoIAccountDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessonFactory' defined in class path resource [applicationContext.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [applicationContext.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.mchange.v2.c3p0.ComboPooledDataSource]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError" />
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="70" />
-        <entry key="ENGLISH" value="72" />
+        <entry key="CHINESE" value="71" />
+        <entry key="ENGLISH" value="73" />
         <entry key="ESTONIAN" value="1" />
         <entry key="SPANISH" value="1" />
       </map>
