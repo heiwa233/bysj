@@ -19,12 +19,12 @@ import java.util.Date;
 public class Order {
     private Integer id;
     private Date orderTime;
-    private Integer carId;
-    private Integer userId;
-    private String username;
-    private Double orderPrice;
-    private Date orderStartTime;
-    private Date orderEndTime;
+    private Integer car_id;
+    private Integer user_id;
+    private String name;
+    private Double price;
+    private Date startTime;
+    private Date endTime;
     private String payStatus;
     private String orderStatus;
 

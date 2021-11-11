@@ -15,7 +15,7 @@ import lombok.Setter;
 public class Car {
     private Integer id;
     private String model;
-    private Integer store_id;
+    private String storename;
     private String car_class;
     private Double oldPrice;
     private Double price;

@@ -73,6 +73,7 @@
                         <tr>
                             <th>车名</th>
                             <th>展示</th>
+                            <th>商家</th>
                             <th>类型</th>
                             <th>特价</th>
                             <th>价格</th>
@@ -86,6 +87,9 @@
                             </td>
                             <td>
                                 <div ><img th:src="${car.imgUrl}"></div>
+                            </td>
+                            <td>
+                                <div th:text="${car.storename}"></div>
                             </td>
                             <td>
                                 <div th:text="${car.car_class}">短租自驾</div>
@@ -117,6 +121,7 @@
                         <tr>
                             <th>车名</th>
                             <th>展示</th>
+                            <th>商家</th>
                             <th>类型</th>
                             <th>特价</th>
                             <th>价格</th>
@@ -132,6 +137,9 @@
                                     <div ><img th:src="${car.imgUrl}"></div>
                                 </td>
                                 <td>
+                                    <div th:text="${car.storename}"></div>
+                                </td>
+                                <td>
                                     <div th:text="${car.car_class}">短租自驾</div>
                                 </td>
                                 <td>
@@ -141,10 +149,10 @@
                                     <div th:text="'¥'+${car.price}+'/日'">￥329/日</div>
                                 </td>
                                 <td>
-                                    <div><button onclick="tan()">查看详情</button></div>
+                                    <div><button th:onclick="xadmin.open('详情页','carDetails[[${car.id}]]',1000,600)">查看详情</button></div>
                                 </td>
                                 <td>
-                                    <div><button onclick="tan()">下单</button></div>
+                                    <div><button th:onclick="xadmin.open('下单','orderAdd[[${car.id}]]')">下单</button></div>
                                 </td>
                             </tr>
                         </div>
@@ -161,6 +169,7 @@
                         <tr>
                             <th>车名</th>
                             <th>展示</th>
+                            <th>商家</th>
                             <th>类型</th>
                             <th>特价</th>
                             <th>价格</th>
@@ -177,6 +186,9 @@
                                     <div ><img th:src="${car.imgUrl}"></div>
                                 </td>
                                 <td>
+                                    <div th:text="${car.storename}"></div>
+                                </td>
+                                <td>
                                     <div th:text="${car.car_class}">短租自驾</div>
                                 </td>
                                 <td>
@@ -186,10 +198,10 @@
                                     <div th:text="'¥'+${car.price}+'/日'">￥329/日</div>
                                 </td>
                                 <td>
-                                    <div><button onclick="tan()">查看详情</button></div>
+                                    <div><button th:onclick="xadmin.open('详情页','carDetails[[${car.id}]]',1000,600)">查看详情</button></div>
                                 </td>
                                 <td>
-                                    <div><button onclick="tan()">下单</button></div>
+                                    <div><button th:onclick="xadmin.open('下单','orderAdd[[${car.id}]]')">下单</button></div>
                                 </td>
                             </tr>
                         </div>
@@ -205,81 +217,41 @@
                         <tr>
                             <th>车名</th>
                             <th>展示</th>
+                            <th>商家</th>
                             <th>类型</th>
                             <th>特价</th>
                             <th>价格</th>
                             <th>详情</th>
                             <th>下单</th>
                         </tr>
-                        <tr>
-                            <td>
-                                <div>大众朗逸</div>
-                            </td>
-                            <td>
-                                <div><img src="user/img/大众朗逸.jpg"></div>
-                            </td>
-                            <td>
-                                <div>短租自驾</div>
-                            </td>
-                            <td>
-                                <div></div>
-                            </td>
-                            <td>
-                                <div>￥329/日</div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">查看详情</button></div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">下单</button></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div>别克英朗</div>
-                            </td>
-                            <td>
-                                <div><img src="user/img/别克英朗.jpg"></div>
-                            </td>
-                            <td>
-                                <div>短租自驾</div>
-                            </td>
-                            <td>
-                                <div></div>
-                            </td>
-                            <td>
-                                <div>￥329/日</div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">查看详情</button></div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">下单</button></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div>丰田雷凌</div>
-                            </td>
-                            <td>
-                                <div><img src="user/img/丰田雷凌.jpg"></div>
-                            </td>
-                            <td>
-                                <div>短租自驾</div>
-                            </td>
-                            <td>
-                                <div></div>
-                            </td>
-                            <td>
-                                <div>￥329/日</div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">查看详情</button></div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">下单</button></div>
-                            </td>
-                        </tr>
+                        <div th:each="car:${carList}" th:if="${car.car_class=='顺风'}">
+                            <tr>
+                                <td>
+                                    <div th:text="${car.model}">丰田雷凌</div>
+                                </td>
+                                <td>
+                                    <div ><img th:src="${car.imgUrl}"></div>
+                                </td>
+                                <td>
+                                    <div th:text="${car.storename}"></div>
+                                </td>
+                                <td>
+                                    <div th:text="${car.car_class}">短租自驾</div>
+                                </td>
+                                <td>
+                                    <div th:text="'¥'+${car.oldPrice}+'/日'"></div>
+                                </td>
+                                <td>
+                                    <div th:text="'¥'+${car.price}+'/日'">￥329/日</div>
+                                </td>
+                                <td>
+                                    <div><button th:onclick="xadmin.open('详情页','carDetails[[${car.id}]]',1000,600)">查看详情</button></div>
+                                </td>
+                                <td>
+                                    <div><button th:onclick="xadmin.open('下单','orderAdd[[${car.id}]]')">下单</button></div>
+                                </td>
+                            </tr>
+                        </div>
                     </table>
 
                 </div>
@@ -293,81 +265,41 @@
                         <tr>
                             <th>车名</th>
                             <th>展示</th>
+                            <th>商家</th>
                             <th>类型</th>
                             <th>特价</th>
                             <th>价格</th>
                             <th>详情</th>
                             <th>下单</th>
                         </tr>
-                        <tr>
-                            <td>
-                                <div>大众朗逸</div>
-                            </td>
-                            <td>
-                                <div><img src="user/img/大众朗逸.jpg"></div>
-                            </td>
-                            <td>
-                                <div>短租自驾</div>
-                            </td>
-                            <td>
-                                <div></div>
-                            </td>
-                            <td>
-                                <div>￥329/日</div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">查看详情</button></div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">下单</button></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div>别克英朗</div>
-                            </td>
-                            <td>
-                                <div><img src="user/img/别克英朗.jpg"></div>
-                            </td>
-                            <td>
-                                <div>短租自驾</div>
-                            </td>
-                            <td>
-                                <div></div>
-                            </td>
-                            <td>
-                                <div>￥329/日</div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">查看详情</button></div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">下单</button></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div>丰田雷凌</div>
-                            </td>
-                            <td>
-                                <div><img src="user/img/丰田雷凌.jpg"></div>
-                            </td>
-                            <td>
-                                <div>短租自驾</div>
-                            </td>
-                            <td>
-                                <div></div>
-                            </td>
-                            <td>
-                                <div>￥329/日</div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">查看详情</button></div>
-                            </td>
-                            <td>
-                                <div><button onclick="tan()">下单</button></div>
-                            </td>
-                        </tr>
+                        <div th:each="car:${carList}" th:if="${car.oldPrice>car.price}">
+                            <tr>
+                                <td>
+                                    <div th:text="${car.model}">丰田雷凌</div>
+                                </td>
+                                <td>
+                                    <div ><img th:src="${car.imgUrl}"></div>
+                                </td>
+                                <td>
+                                    <div th:text="${car.storename}"></div>
+                                </td>
+                                <td>
+                                    <div th:text="${car.car_class}">短租自驾</div>
+                                </td>
+                                <td>
+                                    <div th:text="'¥'+${car.oldPrice}+'/日'"></div>
+                                </td>
+                                <td>
+                                    <div th:text="'¥'+${car.price}+'/日'">￥329/日</div>
+                                </td>
+                                <td>
+                                    <div><button th:onclick="xadmin.open('详情页','carDetails[[${car.id}]]',1000,600)">查看详情</button></div>
+                                </td>
+                                <td>
+                                    <div><button th:onclick="xadmin.open('下单','orderAdd[[${car.id}]]')">下单</button></div>
+                                </td>
+                            </tr>
+                        </div>
                     </table>
                 </div>
             </div>
@@ -399,56 +331,30 @@
                             <th>车型</th>
                             <th>提交时间</th>
                             <th>租赁时间</th>
-                            <th>城市</th>
                             <th>下单状态</th>
                             <th>总价</th>
                         </tr>
-                        <tr>
+                        <tr th:each="order:${orderList}">
                             <td>
-                                <div>1</div>
+                                <div th:text="${order.id}">1</div>
                             </td>
                             <td>
-                                <div>大众朗逸</div>
+                                <div th:text="${order.car_id}">大众朗逸</div>
                             </td>
                             <td>
-                                <div>2020-05-05</div>
+                                <div th:text="${#dates.format(order.startTime,'yyyy-MM-dd')}">2020-05-05</div>
                             </td>
                             <td>
-                                <div>7天</div>
+                                <div th:text="${order.endTime.getDay()-order.startTime.getDay()}+'天'">7天</div>
                             </td>
                             <td>
-                                <div>北京</div>
+                                <div th:text="${order.orderStatus}">未确认</div>
                             </td>
                             <td>
-                                <div>未确认</div>
-                            </td>
-                            <td>
-                                <div>￥2500</div>
+                                <div  th:text="${order.price}">￥2500</div>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <div>2</div>
-                            </td>
-                            <td>
-                                <div>丰田雷凌</div>
-                            </td>
-                            <td>
-                                <div>2020-05-05</div>
-                            </td>
-                            <td>
-                                <div>15天</div>
-                            </td>
-                            <td>
-                                <div>成都</div>
-                            </td>
-                            <td>
-                                <div>未确认</div>
-                            </td>
-                            <td>
-                                <div>￥5000</div>
-                            </td>
-                        </tr>
+
                     </table>
 
                 </div>
@@ -463,56 +369,30 @@
                             <th>车型</th>
                             <th>提交时间</th>
                             <th>租赁时间</th>
-                            <th>城市</th>
                             <th>下单状态</th>
                             <th>总价</th>
                         </tr>
-                        <tr>
+                        <tr th:each="order:${orderList}" th:if="${order.orderStatus=='未确定'}">
                             <td>
-                                <div>1</div>
+                                <div th:text="${order.id}">1</div>
                             </td>
                             <td>
-                                <div>大众朗逸</div>
+                                <div th:text="${order.car_id}">大众朗逸</div>
                             </td>
                             <td>
-                                <div>2020-05-05</div>
+                                <div th:text="${#dates.format(order.startTime,'yyyy-MM-dd')}">2020-05-05</div>
                             </td>
                             <td>
-                                <div>7天</div>
+                                <div th:text="${order.endTime.getDay()-order.startTime.getDay()}+'天'">7天</div>
                             </td>
                             <td>
-                                <div>北京</div>
+                                <div th:text="${order.orderStatus}">未确认</div>
                             </td>
                             <td>
-                                <div>已确认</div>
-                            </td>
-                            <td>
-                                <div>￥2500</div>
+                                <div  th:text="${order.price}">￥2500</div>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <div>2</div>
-                            </td>
-                            <td>
-                                <div>丰田雷凌</div>
-                            </td>
-                            <td>
-                                <div>2020-05-05</div>
-                            </td>
-                            <td>
-                                <div>15天</div>
-                            </td>
-                            <td>
-                                <div>成都</div>
-                            </td>
-                            <td>
-                                <div>已确认</div>
-                            </td>
-                            <td>
-                                <div>￥5000</div>
-                            </td>
-                        </tr>
+
                     </table>
                 </div>
             </div>

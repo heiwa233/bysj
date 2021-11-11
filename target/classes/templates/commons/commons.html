@@ -35,11 +35,11 @@
     </div>
 
     <div class="user">
-        <div th:if="${session.username}!=null">
-            <label th:text="'欢迎你，'+${session.username}"></label>/
+        <div th:if="${session.user}!=null">
+            <label th:text="'欢迎你，'+${session.user.getNickname()}"></label>/
             <a th:href="@{loginOut}">退出登录</a>
         </div>
-        <div th:if="${session.username}==null">
+        <div th:if="${session.user}==null">
             <a th:href="@{loginUser}">用户登录</a>&nbsp;/&nbsp;
             <a th:href="@{regUser}">用户注册</a>
         </div>

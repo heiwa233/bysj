@@ -14,4 +14,5 @@ public interface OrderMapper {
     List<Order> orderList(Integer storeid);
     Order queryOrderById(Integer id);
     Integer insertOrder(Order order);
+    List<Order> queryOrderByUserID(Integer userID);
 }

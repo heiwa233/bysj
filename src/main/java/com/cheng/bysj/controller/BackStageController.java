@@ -2,17 +2,18 @@ package com.cheng.bysj.controller;
 
 import com.cheng.bysj.mapper.OrderMapper;
 import com.cheng.bysj.mapper.StoreMapper;
+import com.cheng.bysj.mapper.UserMapper;
 import com.cheng.bysj.pojo.Order;
 import com.cheng.bysj.pojo.Store;
+import com.cheng.bysj.pojo.User;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -26,6 +27,8 @@ public class BackStageController {
     StoreMapper storeMapper;
     @Autowired
     OrderMapper orderMapper;
+    @Autowired
+    UserMapper userMapper;
 
     @GetMapping("/manageLogin")
     public String manageLogin(){
@@ -57,9 +60,50 @@ public class BackStageController {
     public String welcome1(){
         return "backstage/welcome1";
     }
-    @GetMapping("/member-list")
-    public String memberList(){
+    @RequestMapping("/member-list")
+    public String memberList(Model model){
+        List<User> users = userMapper.queryUsers();
+        model.addAttribute("users",users);
         return "backstage/member/member-list";
+    }
+    @RequestMapping("/member-edit_{id}")
+    public String memberEdit(Model model,@PathVariable("id") Integer id){
+        User user = userMapper.queryUserById(id);
+        model.addAttribute("user",user);
+        return "backstage/member/member-edit";
+    }
+@RequestMapping("/member-edit")
+    public String memberEdit(
+            String username,
+            String email,
+            String nickname,
+            String tel){
+    User user=new User();
+    user.setName(username);
+    user.setEmail(email);
+    user.setNickname(nickname);
+    user.setTel(tel);
+    userMapper.editUserByUserName(user);
+    return "redirect:/member-list";
+    }
+    @RequestMapping("/member-password_{id}")
+    public String memberPassword(@PathVariable("id") Integer id,
+                                 Model model){
+        User user = userMapper.queryUserById(id);
+        model.addAttribute("user",user);
+        return "backstage/member/member-password";
+    }
+    @PostMapping("/member_password{id}")
+    public String memberPassword(Integer id,
+                                 String newpass,
+                                 String repass){
+        if (newpass.equals(repass)){
+            User user=new User();
+            user.setId(id);
+            user.setPassword(newpass);
+            userMapper.editUserByUserid(user);
+        }
+        return "redirect:/member-list";
     }
 
     @RequestMapping("/welcome")
@@ -80,15 +124,32 @@ public class BackStageController {
         Store store = (Store) session.getAttribute("manage");
         List<Order> orderList = orderMapper.orderList(store.getId());
         model.addAttribute("orderList",orderList);
+        System.out.println("orderList = " + orderList);
         return "backstage/order/order-list";
     }
-    @RequestMapping("/orderView{id}")
+    @RequestMapping("/orderView_{id}")
     public String orderView(@PathVariable("id") Integer id,
                             Model model){
         System.out.println("id = " + id);
         Order orderById = orderMapper.queryOrderById(id);
         model.addAttribute("orderById",orderById);
         return "backstage/order/order-view";
+    }
+    @PostMapping("/editOrder")
+    public String editOrder(
+            @RequestParam("id") String id,
+            @RequestParam("startTime") String startTime,
+            @RequestParam("endTime") String endTime,
+            @RequestParam("payStatus") String payStatus,
+            @RequestParam("orderStatus") String orderStatus
+
+    ){
+        System.out.println("id = " + id);
+        System.out.println("startTime = " + startTime);
+        System.out.println("endTime = " + endTime);
+        System.out.println("payStatus = " + payStatus);
+        System.out.println("orderStatus = " + orderStatus);
+        return "redirect:/orderList";
     }
     @RequestMapping("delOrder/{id}")
     public String delOrder(Integer id){

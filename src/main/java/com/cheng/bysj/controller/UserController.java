@@ -93,14 +93,17 @@ public class UserController {
 
     @RequestMapping("/loginOut")
     public String loginOut(HttpSession session){
-        session.removeAttribute("username");
+        session.removeAttribute("user");
         return "redirect:/";
     }
 
     @RequestMapping("/main.html")
-    public String userFunc(Model model){
+    public String userFunc(Model model,HttpSession session){
         List<Car> carList = carMapper.queryAllCar();
-        System.out.println("carList = " + carList);
+        User user = (User) session.getAttribute("user");
+        List<Order> orders = orderMapper.queryOrderByUserID(user.getId());
+
+        model.addAttribute("orderList",orders);
         model.addAttribute("carList",carList);
         return "user/userFunc";
     }
@@ -129,11 +132,11 @@ public class UserController {
         }
         User user = (User) session.getAttribute("user");
         Order order=new Order();
-        order.setCarId(id);
-        order.setUserId(user.getId());
-        order.setOrderPrice(price*i);
-        order.setOrderStartTime(startDate);
-        order.setOrderEndTime(endDate);
+        order.setCar_id(id);
+        order.setUser_id(user.getId());
+        order.setPrice(price*i);
+        order.setStartTime(startDate);
+        order.setEndTime(endDate);
 
         Integer integer = orderMapper.insertOrder(order);
         System.out.println("integer = " + integer);

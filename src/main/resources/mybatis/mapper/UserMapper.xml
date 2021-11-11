@@ -5,5 +5,17 @@
     <insert id="insertUser" parameterType="User">
         insert into user (name,nickname,password) values (#{name},#{nickname},#{password});
     </insert>
+    <select id="queryUsers" resultType="User">
+        select * from User;
+    </select>
+    <select id="queryUserById" parameterType="Integer" resultType="User">
+        select * from user where id=#{id}
+    </select>
+    <update id="editUserByUserName">
+        update `User` set nickname=#{nickname},tel=#{tel},email=#{email} where name=#{name}
+    </update>
+    <update id="editUserByUserid">
+        update `User` set password=#{password} where id=#{id}
+    </update>
 
 </mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cheng.bysj.mapper.CarMapper">
+
+    <select id="queryAllCar" resultType="Car">
+        select car.id,model,store.`name` as storename,car_class,oldprice,price,imgUrl,gearbox,seat,aspiration,tank,burn from Car,Store where Car.store_id=Store.id
+    </select>
+    <select id="queryCarById" parameterType="Integer" resultType="Car">
+        select car.id,model,store.`name` as storename,car_class,oldprice,price,imgUrl,gearbox,seat,aspiration,tank,burn from Car,Store where Car.store_id=Store.id
+and car.id=#{id};
+    </select>
+
+</mapper>

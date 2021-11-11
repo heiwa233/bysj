@@ -19,5 +19,9 @@ public interface UserMapper {
     User queryUserByUsername(String username);
 
     Integer insertUser(User user);
+    List<User> queryUsers();
+    User queryUserById(Integer id);
+    Integer editUserByUserName(User user);
+    Integer editUserByUserid(User user);
 
 }
