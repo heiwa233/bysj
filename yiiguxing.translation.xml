@@ -3,6 +3,11 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="org.thymeleaf.exceptions.TemplateInputException: Error resolving template [carEdit], template might not exist or might not be accessible by any of the configured Template Resolvers" />
+      <item value="burn" />
+      <item value="进气" />
+      <item value="aspiration" />
+      <item value="gearbox" />
       <item value="controller" />
       <item value="contrller" />
       <item value="Attribute &quot;name&quot; appears more than once in element" />
@@ -48,16 +53,11 @@
       <item value="login()' is already defined in 'cn.edu.svtcc.controller.LoginController'" />
       <item value="Identify and stop the process that's listening on port 8080 or configure this application to listen on another port." />
       <item value="Field error in object 'employe' on field 'department': rejected value [101]; codes [typeMismatch.employe.department,typeMismatch.department,typeMismatch.cn.edu.svtcc.bysj.pojo.Department,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employe.department,department]; arguments []; default message [department]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'cn.edu.svtcc.bysj.pojo.Department' for property 'department'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'cn.edu.svtcc.bysj.pojo.Department' for property 'department': no matching editors or conversion strategy found]]" />
-      <item value="Error resolving fragment: &quot;~{dashboard :: topbar}&quot;: template or fragment could not be resolved (template: &quot;emplist&quot; - line 46, col 8)" />
-      <item value="Error resolving template [login], template might not exist or might not be accessible by any of the configured Template Resolvers" />
-      <item value="Error creating bean with name 'employeeDao' defined in file [UserszhangzhouDesktopBYSJ2targetclassescnedusvtccbysjdaoEmployeeDao.class]: Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError" />
-      <item value="driver Class Loader" />
-      <item value="aaa&#10;" />
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="73" />
-        <entry key="ENGLISH" value="74" />
+        <entry key="CHINESE" value="79" />
+        <entry key="ENGLISH" value="80" />
         <entry key="ESTONIAN" value="1" />
         <entry key="WELSH" value="1" />
         <entry key="SPANISH" value="1" />
