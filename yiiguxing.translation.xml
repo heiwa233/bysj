@@ -3,6 +3,8 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="Uncaught TypeError: Cannot set properties of null (setting 'onchange')" />
+      <item value="弹窗" />
       <item value="org.thymeleaf.exceptions.TemplateInputException: Error resolving template [carEdit], template might not exist or might not be accessible by any of the configured Template Resolvers" />
       <item value="burn" />
       <item value="进气" />
@@ -51,13 +53,11 @@
       <item value="Ambiguous mapping. Cannot map 'userController' method com.cheng.bysj.controller.UserControllerloginAction()" />
       <item value="add View Controller" />
       <item value="login()' is already defined in 'cn.edu.svtcc.controller.LoginController'" />
-      <item value="Identify and stop the process that's listening on port 8080 or configure this application to listen on another port." />
-      <item value="Field error in object 'employe' on field 'department': rejected value [101]; codes [typeMismatch.employe.department,typeMismatch.department,typeMismatch.cn.edu.svtcc.bysj.pojo.Department,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employe.department,department]; arguments []; default message [department]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'cn.edu.svtcc.bysj.pojo.Department' for property 'department'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'cn.edu.svtcc.bysj.pojo.Department' for property 'department': no matching editors or conversion strategy found]]" />
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="79" />
-        <entry key="ENGLISH" value="80" />
+        <entry key="CHINESE" value="80" />
+        <entry key="ENGLISH" value="81" />
         <entry key="ESTONIAN" value="1" />
         <entry key="WELSH" value="1" />
         <entry key="SPANISH" value="1" />
@@ -65,7 +65,7 @@
     </option>
   </component>
   <component name="Cache">
-    <option name="lastTrimTime" value="1636427287669" />
+    <option name="lastTrimTime" value="1637567985456" />
   </component>
   <component name="Settings">
     <option name="baiduTranslateSettings">
