@@ -3,6 +3,7 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="strict" />
       <item value="hangman" />
       <item value="There is already 'orderController' bean method" />
       <item value="PROJECT ID" />
@@ -52,12 +53,11 @@
       <item value="nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'user' in 'class com.cheng.bysj.pojo.User'] with root cause" />
       <item value="Variable 'newUser' might not have been initialized" />
       <item value="There is no getter for property named 'user' in 'class com.cheng.bysj.pojo.User'" />
-      <item value="Parameter Maps collection does not contain value for com.cheng.bysj.mapper.UserMapper.User] with root cause" />
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="86" />
-        <entry key="ENGLISH" value="87" />
+        <entry key="CHINESE" value="87" />
+        <entry key="ENGLISH" value="88" />
         <entry key="ESTONIAN" value="1" />
         <entry key="WELSH" value="1" />
         <entry key="SPANISH" value="1" />
