@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汽车租赁网</title>
+    <link rel="stylesheet" href="user/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="user/css/page-index.css" type="text/css">
+    <script type="text/javascript" src="user/js/tools.js"></script>
+    <script type="text/javascript" src="user/js/banner.js"></script>
+</head>
+<body>
+   <div th:insert="commons/commons::web_head"></div>
+
+    <!--轮播图-->
+    <div class="banner w">
+        <ul id="imgList">
+            <li><img class="bannerP" src="user/img/banner0.jpg" alt="这是轮播图1"></li>
+            <li><img class="bannerP" src="user/img/banner1.jpg" alt="这是轮播图2"></li>
+            <li><img class="bannerP" src="user/img/banner2.jpg" alt="这是轮播图3"></li>
+            <li><img class="bannerP" src="user/img/banner3.jpg" alt="这是轮播图4"></li>
+            <li><img class="bannerP" src="user/img/banner0.jpg" alt="这是轮播图1"></li>
+        </ul>
+        <div class="pointerDIV">
+            <a class="bannerA" href="#"></a>
+            <a class="bannerA" href="#"></a>
+            <a class="bannerA" href="#"></a>
+            <a class="bannerA" href="#"></a>
+        </div>
+    </div>
+
+    <!--网站主内容-->
+    <div class="content w clearfix">
+        <h1>
+            您的需求，我们的帮助，为您营造方便路途！
+        </h1>
+        <div class="specials">
+            <h2>本周特价</h2>
+            <p class="p1">On sale this week</p>
+            <div class="imgDIV">
+                <img src="user/img/大众朗逸.jpg" alt="第一张图片">
+                <p class="p2">大众朗逸</p>三厢|1.6自动|乘坐5人
+                <p class="p3">￥329/日</p>
+            </div>
+            <!-- <p class="p2">大众朗逸</p>
+            <a class="lm" href="#"><button>了解详情</button></a> -->
+            <div class="imgDIV">
+                <img src="user/img/别克英朗.jpg" alt="第二张图片">
+                <p class="p2">别克英朗</p>三厢|1.5自动|乘坐5人
+                <p class="p3">￥331/日</p>
+            </div>
+            <div class="imgDIV">
+                <img src="user/img/丰田雷凌.jpg" alt="第三张图片">
+                <p class="p2">丰田雷凌</p>三厢|1.2T自动|乘坐5人
+                <p class="p3">￥349/日</p>
+            </div>
+            <a class="lm" href="#"><button>更多特价信息</button></a>
+        </div>
+        <div class="main">
+            <div class="shang">
+                <div class="rent">
+                    <h2>租车须知</h2>
+                    <p class="p1">Instructions for car rental</p>
+                    <div class="wenzi">
+                        <div><a href="">顺风车规则</a></div><hr>
+                        <div><a href="">长租服务详情</a></div><hr>
+                        <div><a href="">企业租车详情</a></div><hr>
+                        <div><a href="">待租车况需知</a></div><hr>
+                        <div><a href="">租车资格需知</a></div><hr>
+                        <div><a href="">取还车流程</a></div><hr>
+                    </div>
+                    <a href="#"><button>了解更多租车须知</button></a>
+                </div>
+                <div class="us">
+                    <h2>关于我们</h2>
+                    <p class="p1">Learn more about us</p>
+                    <div class="wenzi">
+                        <img src="user/img/company.jpg">
+                        <p>
+                            XX租车有限公司(CAR Inc.，简称XX租车)成立于2007年9月，总部位于北京。作为中国领先的汽车租赁服务提供商，XX租车积极借鉴国际上成功的汽车租赁模式，并结合中国客户的消费习惯，为客户提供短租、长租及融资租赁等专业化的汽车租赁服务，以及全国救援、异地还车等完善的配套服务。截至2017年12月，神州租车在国内300余个主要城市设有1100余个服务网点，服务个人客户过千万、企业客户数万家，是目前中国汽车租赁行业的领跑企业。
+                        </p>
+                    </div>
+                    <a href="#"><button>更多关于我们的信息</button></a>
+                </div>
+            </div>
+            <div class="contact">
+                <h2>在线留言</h2>
+                <p class="p1">Contact us by online message</p>
+                <div class="feedback">
+                    <form action="#" class="form">
+                        <div class="form-body">
+                            <div class="ui-input">
+                                <input type="text" placeholder="姓名" name="name">
+                            </div>
+                            <div class="ui-input">
+                                <input type="text" placeholder="邮箱" name="email">
+                            </div>
+                            <div class="ui-input">
+                                <input type="text" placeholder="留言主题" name="messageItem">
+                            </div>
+                            <div class="ui-input">
+                                <textarea placeholder="留言内容" rows="10" cols="30" name="messageContent"></textarea>
+                            </div>
+                            <a href="#"><button>提交</button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:insert="commons/commons::web_footer"></div>
+
+</body>
+</html>

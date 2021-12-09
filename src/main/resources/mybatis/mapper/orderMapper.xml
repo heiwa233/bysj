@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cheng.bysj.mapper.OrderMapper">
+    <select id="orderList" parameterType="Integer" resultType="Order">
+        SELECT `Order`.id,`Order`.ordertime,car_id, user.`name`,`Order`.price,starttime,endtime,payStatus,orderStatus FROM `Order`,`User` ,Car
+        WHERE `Order`.user_id=`User`.id AND Car.id=`Order`.car_id AND Car.store_id=#{storeid}
+    </select>
+    <select id="queryOrderById" parameterType="Integer" resultType="Order">
+        SELECT `Order`.id,`Order`.ordertime,car_id, user.`name`,`Order`.price,starttime,endtime,payStatus,orderStatus FROM `Order`,`User`
+        WHERE `Order`.user_id=`User`.id and `order`.id=#{id}
+    </select>
+    <select id="insertOrder" parameterType="Order" resultType="Integer">
+        INSERT INTO `Order` (car_id,user_id,price,starttime,endtime)VALUES(#{car_id}, #{user_id},#{Price}, #{orderStartTime},#{orderEndTime})
+    </select>
+    <select id="queryOrderByUserID" parameterType="Integer" resultType="Order">
+        select * from `Order` where user_id=#{userID}
+    </select>
+</mapper>
