@@ -3,6 +3,8 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'id' for method parameter type Integer is present but converted to null]" />
+      <item value="add Attribute" />
       <item value="target-densitydpi&quot; is not supported." />
       <item value="serialize" />
       <item value="strict" />
@@ -51,13 +53,11 @@
       <item value="There is no getter for property named 'user' in 'class com.cheng.bysj.pojo.User'] with root cause" />
       <item value="Invalid bound statement (not found): com.cheng.bysj.mapper.UserMapper.insertUser] with root cause" />
       <item value="You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''zhangsan'' at line 1] with root cause" />
-      <item value="Repository" />
-      <item value="nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'user' in 'class com.cheng.bysj.pojo.User'] with root cause" />
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="90" />
-        <entry key="ENGLISH" value="91" />
+        <entry key="CHINESE" value="92" />
+        <entry key="ENGLISH" value="93" />
         <entry key="ESTONIAN" value="1" />
         <entry key="WELSH" value="1" />
         <entry key="SPANISH" value="1" />
@@ -65,7 +65,7 @@
     </option>
   </component>
   <component name="Cache">
-    <option name="lastTrimTime" value="1637567985456" />
+    <option name="lastTrimTime" value="1639396567738" />
   </component>
   <component name="Settings">
     <option name="baiduTranslateSettings">
