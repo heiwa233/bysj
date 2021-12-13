@@ -3,6 +3,7 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="Required URI template variable 'id' for method parameter type Integer is present but converted to null]" />
       <item value="Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'id' for method parameter type Integer is present but converted to null]" />
       <item value="add Attribute" />
       <item value="target-densitydpi&quot; is not supported." />
@@ -52,12 +53,11 @@
       <item value="Expected one result (or null) to be returned by selectOne()" />
       <item value="There is no getter for property named 'user' in 'class com.cheng.bysj.pojo.User'] with root cause" />
       <item value="Invalid bound statement (not found): com.cheng.bysj.mapper.UserMapper.insertUser] with root cause" />
-      <item value="You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''zhangsan'' at line 1] with root cause" />
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="92" />
-        <entry key="ENGLISH" value="93" />
+        <entry key="CHINESE" value="93" />
+        <entry key="ENGLISH" value="94" />
         <entry key="ESTONIAN" value="1" />
         <entry key="WELSH" value="1" />
         <entry key="SPANISH" value="1" />
