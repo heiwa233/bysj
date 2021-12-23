@@ -3,6 +3,7 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="nickname" />
       <item value="Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'id' for method parameter type Integer is not present]" />
       <item value="Required URI template variable 'id' for method parameter type Integer is not present]" />
       <item value="Error resolving template [carAdd], template might not exist or might not be accessible by any of the configured Template Resolvers" />
@@ -52,12 +53,11 @@
       <item value="To display the conditions report re-run your application with 'debug' enabled." />
       <item value="If you want an embedded database (H2, HSQL or Derby), please put it on the classpath. If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active)." />
       <item value="An error happened during template parsing (template: &quot;class path resource [templatesbackstageorderorder-list.html]&quot;)" />
-      <item value="A query was run and no Result Maps were found for the Mapped Statement 'com.cheng.bysj.mapper.OrderMapper.orderList'. It's likely that neither a Result Type nor a Result Map was specified." />
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="106" />
-        <entry key="ENGLISH" value="107" />
+        <entry key="CHINESE" value="107" />
+        <entry key="ENGLISH" value="108" />
         <entry key="ESTONIAN" value="1" />
         <entry key="CZECH" value="1" />
         <entry key="NORWEGIAN" value="1" />
