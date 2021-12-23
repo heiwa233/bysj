@@ -3,6 +3,7 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="Could not find artifact net.sf.json-lib:json-lib:jar:2.2.3 in central (https:repo.maven.apache.orgmaven2)" />
       <item value="Required URI template variable 'id' for method parameter type Integer is present but converted to null]" />
       <item value="Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'id' for method parameter type Integer is present but converted to null]" />
       <item value="add Attribute" />
@@ -52,20 +53,20 @@
       <item value="Error resolving template [test], template might not exist or might not be accessible by any of the configured Template Resolvers" />
       <item value="Expected one result (or null) to be returned by selectOne()" />
       <item value="There is no getter for property named 'user' in 'class com.cheng.bysj.pojo.User'] with root cause" />
-      <item value="Invalid bound statement (not found): com.cheng.bysj.mapper.UserMapper.insertUser] with root cause" />
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="93" />
+        <entry key="CHINESE" value="94" />
         <entry key="ENGLISH" value="94" />
         <entry key="ESTONIAN" value="1" />
+        <entry key="CZECH" value="1" />
         <entry key="WELSH" value="1" />
         <entry key="SPANISH" value="1" />
       </map>
     </option>
   </component>
   <component name="Cache">
-    <option name="lastTrimTime" value="1639396567738" />
+    <option name="lastTrimTime" value="1640235253142" />
   </component>
   <component name="Settings">
     <option name="baiduTranslateSettings">
