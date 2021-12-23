@@ -3,6 +3,8 @@
     <option name="newTranslationDialogX" value="574" />
     <option name="newTranslationDialogY" value="359" />
     <histories>
+      <item value="required a bean of type 'com.cheng.bysj.service.impl.FileServiceImpl' that could not be found." />
+      <item value="Consider defining a bean of type 'com.cheng.bysj.service.FileService' in your configuration." />
       <item value="(No such file or directory)" />
       <item value="staticCarImg截屏2021-12-23 上午11.06.42.png (No such file or directory)" />
       <item value="Required request part 'file' is not present]" />
@@ -51,13 +53,11 @@
       <item value="Successfully created project 'bysj' on GitHub, but initial push failed: unable to access 'https:github.comheiwa233bysj.git': Failed to connect to github.com port 443: Operation timed out" />
       <item value="Public Key Retrieval is not allowed" />
       <item value="Could not parse as expression: &quot;csslogin.css&quot; (template: &quot;backstagelogin&quot; - line 11, col 28)" />
-      <item value="后台" />
-      <item value="A query was run and no Result Maps were found for the Mapped Statement 'com.cheng.bysj.mapper.UserMapper.queryAllCar'. It's likely that neither a Result Type nor a Result Map was specified." />
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="96" />
-        <entry key="ENGLISH" value="97" />
+        <entry key="CHINESE" value="98" />
+        <entry key="ENGLISH" value="99" />
         <entry key="ESTONIAN" value="1" />
         <entry key="CZECH" value="1" />
         <entry key="WELSH" value="1" />
